@@ -20,7 +20,8 @@ const SYSTEM_INSTRUCTION =
   "use a dash and a space at the start of each line instead.";
 
 // Best-effort in-memory rate limit. Resets on server restart / per instance —
-// not a substitute for a real rate limiter (e.g. Upstash) in production.
+// not a substitute for a real rate
+//  limiter (e.g. Upstash) in production.
 const requestLog = new Map();
 
 function isRateLimited(ip) {

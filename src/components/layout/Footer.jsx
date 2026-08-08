@@ -64,10 +64,8 @@ export function Footer() {
             </span>
           </Link>
           <p className="max-w-xs text-sm leading-relaxed text-mist-100/60">
-            Turkish International Academy of The Medical Science &amp; Aesthetics
-            — a globally recognized authority upholding the highest standards of
-            excellence in medical science, aesthetics, and cosmetology
-            education.
+            Türkiye Uluslararası Tıp Bilimleri ve Estetik Akademisi – Tıbbi
+            eğitimde ve estetik mükemmellikte dünya çapında öncülük ediyor.
           </p>
           <div className="flex items-center gap-2">
             {socials.map((s) => (
@@ -145,10 +143,10 @@ export function Footer() {
                 <path d="m3 7 9 6 9-6" />
               </svg>
               <a
-                href="mailto:info@turkeyinternationalacademy.com"
+                href="mailto:support@turkishinternationalacademy.com"
                 className="hover:text-white"
               >
-                info@turkeyinternationalacademy.com
+                support@turkishinternationalacademy.com
               </a>
             </li>
             <li className="flex items-start gap-2.5">
@@ -190,7 +188,16 @@ export function Footer() {
             </p>
             {subscribed ? (
               <p className="flex items-center gap-1.5 text-sm font-medium text-gold-300">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
                   <path d="M20 6 9 17l-5-5" />
                 </svg>
                 Subscribed — thank you!

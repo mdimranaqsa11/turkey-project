@@ -18,7 +18,7 @@ export function GlassCard({
       className={cn(
         "rounded-(--radius-lg) transition-transform duration-500 ease-(--ease-premium)",
         variants[variant],
-        className
+        className,
       )}
       {...props}
     >

@@ -82,7 +82,7 @@ export function AboutCommitment() {
           <GlassCard variant="strong" className="overflow-hidden p-3">
             <div className="relative aspect-[4/5] w-full overflow-hidden rounded-(--radius-md)">
               <Image
-                src="/images/about/portrait-commitment.jpeg"
+                src="/images/about/tukeish_doc.jpg"
                 alt="TIAMA-certified aesthetic medicine professional"
                 fill
                 className="object-cover"

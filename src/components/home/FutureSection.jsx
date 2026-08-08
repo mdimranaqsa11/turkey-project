@@ -26,7 +26,7 @@ export function FutureSection() {
                   src="/images/home/portrait-professional.jpeg"
                   alt="TIAMA-trained professional"
                   fill
-                  className="object-cover"
+                  className="object-cover object-left"
                   sizes="(min-width: 1024px) 30vw, 80vw"
                 />
               </div>

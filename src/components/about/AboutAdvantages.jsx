@@ -97,7 +97,7 @@ export function AboutAdvantages() {
               src="/images/about/team-circle.jpeg"
               alt="TIAMA expert faculty"
               fill
-              className="object-cover"
+              className="object-cover object-[center_20%]"
               sizes="288px"
             />
           </Reveal>
@@ -129,7 +129,7 @@ export function AboutAdvantages() {
               src="/images/about/team-circle.jpeg"
               alt="TIAMA expert faculty"
               fill
-              className="object-cover"
+              className="object-cover object-[center_20%]"
               sizes="256px"
             />
           </Reveal>

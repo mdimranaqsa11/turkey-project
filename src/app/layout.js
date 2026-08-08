@@ -74,7 +74,7 @@ const organizationJsonLd = {
   contactPoint: {
     "@type": "ContactPoint",
     telephone: "+90-65-588-7051",
-    email: "info@turkeyinternationalacademy.com",
+    email: "support@turkishinternationalacademy.com",
     contactType: "customer service",
   },
 };

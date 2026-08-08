@@ -3,9 +3,9 @@ import { GlassCard } from "@/components/ui/GlassCard";
 const items = [
   {
     label: "Email",
-    value: "info@turkeyinternationalacademy.com",
+    value: "support@turkishinternationalacademy.com",
     note: "We reply within 24 hours",
-    href: "mailto:info@turkeyinternationalacademy.com",
+    href: "mailto:support@turkishinternationalacademy.com",
     icon: (
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <rect x="3" y="5" width="18" height="14" rx="2" />

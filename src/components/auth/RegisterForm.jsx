@@ -4,6 +4,7 @@ import { useId, useState } from "react";
 import Link from "next/link";
 import { FormField } from "@/components/ui/FormField";
 import { Button } from "@/components/ui/Button";
+import { ServiceNotice } from "@/components/ui/ServiceNotice";
 import { cn } from "@/lib/utils";
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -90,15 +91,11 @@ export function RegisterForm() {
 
   if (submitted) {
     return (
-      <div className="flex flex-col items-center gap-3 py-6 text-center">
-        <span className="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-gold-300 to-gold-500 text-ink-950">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M20 6 9 17l-5-5" />
-          </svg>
-        </span>
-        <p className="text-sm text-mist-200/80">
-          Account created successfully. Welcome to TIAMA.
-        </p>
+      <div className="flex flex-col items-center gap-4 py-4">
+        <ServiceNotice className="w-full" />
+        <Button type="button" variant="glass" size="sm" onClick={() => setSubmitted(false)}>
+          Back to form
+        </Button>
       </div>
     );
   }

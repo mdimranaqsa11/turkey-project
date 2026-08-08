@@ -41,7 +41,7 @@ export function AccreditationStrip() {
             {track.map((logo, i) => (
               <div
                 key={`${logo.alt}-${i}`}
-                className="flex h-16 w-36 shrink-0 items-center justify-center rounded-(--radius-sm) bg-mist-50 p-2.5 opacity-80 shadow-(--shadow-glass) transition-opacity duration-300 hover:opacity-100"
+                className="flex h-24 w-52 shrink-0 items-center justify-center rounded-(--radius-sm) bg-mist-50 p-2 opacity-80 shadow-(--shadow-glass) transition-opacity duration-300 hover:opacity-100"
               >
                 <div className="relative h-full w-full">
                   <Image
@@ -49,7 +49,7 @@ export function AccreditationStrip() {
                     alt={logo.alt}
                     fill
                     className="object-contain"
-                    sizes="144px"
+                    sizes="208px"
                   />
                 </div>
               </div>

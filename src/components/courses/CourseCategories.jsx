@@ -102,14 +102,14 @@ export function CourseCategories() {
                 </div>
 
                 <div className="flex flex-1 flex-col gap-4 p-6">
-                  <h3 className="font-display text-xl font-semibold tracking-tight text-ink-950">
+                  <h3 className="font-display text-xl font-semibold tracking-tight text-mist-50">
                     {cat.title}
                   </h3>
-                  <p className="flex-1 text-sm leading-relaxed text-ink-700/80">
+                  <p className="flex-1 text-sm leading-relaxed text-mist-200/80">
                     {cat.description}
                   </p>
 
-                  <div className="flex items-center gap-2 text-xs font-medium text-royal-600">
+                  <div className="flex items-center gap-2 text-xs font-medium text-royal-300">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                       <circle cx="12" cy="12" r="10" />
                       <path d="M12 6v6l4 2" />
@@ -117,23 +117,23 @@ export function CourseCategories() {
                     {cat.duration}
                   </div>
 
-                  <div className="flex flex-wrap items-center justify-between gap-4 border-t border-ink-900/10 pt-4">
+                  <div className="flex flex-wrap items-center justify-between gap-4 border-t border-white/10 pt-4">
                     {cat.contactOnly ? (
                       <div>
-                        <p className="text-xs font-medium uppercase tracking-wide text-ink-700/50">
+                        <p className="text-xs font-medium uppercase tracking-wide text-mist-200/50">
                           Course Fee
                         </p>
-                        <p className="font-display text-lg font-bold text-ink-950">
+                        <p className="font-display text-lg font-bold text-mist-50">
                           Contact for details
                         </p>
                       </div>
                     ) : (
                       <div>
-                        <p className="text-xs font-medium uppercase tracking-wide text-ink-700/50">
+                        <p className="text-xs font-medium uppercase tracking-wide text-mist-200/50">
                           Regular Price{" "}
-                          <span className="ml-1 text-ink-700/40 line-through">{cat.regular}</span>
+                          <span className="ml-1 text-mist-200/40 line-through">{cat.regular}</span>
                         </p>
-                        <p className="font-display text-2xl font-bold text-ink-950">
+                        <p className="font-display text-2xl font-bold text-mist-50">
                           {cat.special}
                         </p>
                       </div>

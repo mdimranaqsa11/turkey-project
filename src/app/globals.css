@@ -1,51 +1,53 @@
 @import "tailwindcss";
 
 :root {
-  /* Core surfaces */
-  --background: #f6f7fb;
-  --foreground: #10132b;
+  /* Core surfaces — dark-first glass intelligence theme */
+  --background: #0c0f10;
+  --foreground: #e7e9ee;
 
-  /* Brand palette — deep navy + royal blue + warm gold accent */
-  --color-ink-950: #0a0d24;
-  --color-ink-900: #10132b;
-  --color-ink-800: #171b3d;
-  --color-ink-700: #21265a;
-  --color-ink-600: #2b3175;
+  /* Ink scale — dark surface layers, darkest to lightest */
+  --color-ink-950: #08090b;
+  --color-ink-900: #0c0f10;
+  --color-ink-800: #111415;
+  --color-ink-700: #191c1e;
+  --color-ink-600: #282a2c;
 
-  --color-royal-600: #2f4bd6;
-  --color-royal-500: #3f5eef;
-  --color-royal-400: #6d84f5;
-  --color-royal-300: #a4b3fa;
-  --color-royal-100: #e5e9fd;
+  /* Mist scale — text-on-dark, brightest to dimmest */
+  --color-mist-50: #f4f5f7;
+  --color-mist-100: #e7e9ee;
+  --color-mist-200: #c4c6cd;
 
+  /* Royal — medical blue accent, used sparingly for info cues + ambient glow */
+  --color-royal-600: #123f63;
+  --color-royal-500: #2f5c86;
+  --color-royal-400: #6d93b8;
+  --color-royal-300: #b6c8df;
+  --color-royal-100: #d2e4fc;
+
+  /* Gold — primary accent, elite/premium actions */
   --color-gold-600: #b8862f;
-  --color-gold-500: #d4a24c;
-  --color-gold-400: #e3bd75;
-  --color-gold-300: #f0d9a6;
-  --color-gold-100: #faf1de;
-
-  --color-mist-50: #f6f7fb;
-  --color-mist-100: #eef0f9;
-  --color-mist-200: #e2e5f5;
+  --color-gold-500: #c9a24d;
+  --color-gold-400: #ebc168;
+  --color-gold-300: #f6cb72;
+  --color-gold-100: #ffdf9f;
 
   /* Glass surfaces */
-  --glass-light: rgba(255, 255, 255, 0.55);
-  --glass-light-strong: rgba(255, 255, 255, 0.75);
-  --glass-border-light: rgba(255, 255, 255, 0.6);
-  --glass-dark: rgba(16, 19, 43, 0.55);
-  --glass-dark-strong: rgba(16, 19, 43, 0.72);
-  --glass-border-dark: rgba(255, 255, 255, 0.12);
+  --glass-subtle: rgba(255, 255, 255, 0.04);
+  --glass-strong: rgba(17, 20, 21, 0.65);
+  --glass-tint: rgba(11, 36, 56, 0.6);
+  --glass-border: rgba(255, 255, 255, 0.15);
+  --glass-border-soft: rgba(255, 255, 255, 0.1);
 
-  --shadow-glass: 0 8px 32px rgba(16, 19, 43, 0.08), 0 1.5px 4px rgba(16, 19, 43, 0.04);
-  --shadow-glass-lg: 0 24px 64px -12px rgba(16, 19, 43, 0.18), 0 2px 6px rgba(16, 19, 43, 0.06);
-  --shadow-gold-glow: 0 8px 30px -6px rgba(212, 162, 76, 0.35);
-  --shadow-royal-glow: 0 8px 30px -6px rgba(63, 94, 239, 0.35);
+  --shadow-glass: 0 8px 32px rgba(7, 26, 43, 0.5);
+  --shadow-glass-lg: 0 24px 64px -12px rgba(7, 26, 43, 0.6), 0 2px 6px rgba(0, 0, 0, 0.2);
+  --shadow-gold-glow: 0 8px 30px -6px rgba(201, 162, 77, 0.4);
+  --shadow-royal-glow: 0 8px 30px -6px rgba(47, 92, 134, 0.45);
 
   --radius-xs: 0.5rem;
-  --radius-sm: 0.875rem;
-  --radius-md: 1.25rem;
-  --radius-lg: 1.75rem;
-  --radius-xl: 2.5rem;
+  --radius-sm: 1rem;
+  --radius-md: 1.5rem;
+  --radius-lg: 2rem;
+  --radius-xl: 3rem;
   --radius-full: 999px;
 
   --ease-premium: cubic-bezier(0.16, 1, 0.3, 1);
@@ -95,19 +97,13 @@
   --ease-premium: var(--ease-premium);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0d24;
-    --foreground: #f2f3fb;
-  }
-}
-
 * {
   border-color: color-mix(in oklab, var(--foreground) 10%, transparent);
 }
 
 html {
   scroll-behavior: smooth;
+  color-scheme: dark;
 }
 
 body {
@@ -117,45 +113,45 @@ body {
 }
 
 ::selection {
-  background: var(--color-gold-300);
+  background: var(--color-gold-400);
   color: var(--color-ink-950);
 }
 
 /* ---- Glassmorphism primitives ---- */
 
 .glass-panel {
-  background: var(--glass-light);
-  border: 1px solid var(--glass-border-light);
+  background: var(--glass-subtle);
+  border: 1px solid var(--glass-border-soft);
   box-shadow: var(--shadow-glass);
-  backdrop-filter: blur(20px) saturate(160%);
-  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  backdrop-filter: blur(20px) saturate(140%);
+  -webkit-backdrop-filter: blur(20px) saturate(140%);
 }
 
 .glass-panel-strong {
-  background: var(--glass-light-strong);
-  border: 1px solid var(--glass-border-light);
-  box-shadow: var(--shadow-glass-lg);
-  backdrop-filter: blur(28px) saturate(180%);
-  -webkit-backdrop-filter: blur(28px) saturate(180%);
-}
-
-.glass-panel-dark {
-  background: var(--glass-dark);
-  border: 1px solid var(--glass-border-dark);
+  background: var(--glass-strong);
+  border: 1px solid var(--glass-border);
   box-shadow: var(--shadow-glass-lg);
   backdrop-filter: blur(24px) saturate(160%);
   -webkit-backdrop-filter: blur(24px) saturate(160%);
 }
 
+.glass-panel-dark {
+  background: var(--glass-tint);
+  border: 1px solid var(--glass-border-soft);
+  box-shadow: var(--shadow-glass-lg);
+  backdrop-filter: blur(24px) saturate(140%);
+  -webkit-backdrop-filter: blur(24px) saturate(140%);
+}
+
 .text-gradient-gold {
-  background: linear-gradient(120deg, var(--color-gold-600), var(--color-gold-400) 50%, var(--color-gold-600));
+  background: linear-gradient(120deg, var(--color-gold-300), var(--color-gold-400) 50%, var(--color-gold-600));
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
 
 .text-gradient-royal {
-  background: linear-gradient(120deg, var(--color-royal-600), var(--color-royal-400));
+  background: linear-gradient(120deg, var(--color-royal-300), var(--color-royal-400));
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -163,10 +159,22 @@ body {
 
 .bg-mesh-hero {
   background-image:
-    radial-gradient(60% 50% at 15% 10%, color-mix(in oklab, var(--color-royal-400) 35%, transparent), transparent),
-    radial-gradient(50% 45% at 90% 15%, color-mix(in oklab, var(--color-gold-400) 30%, transparent), transparent),
-    radial-gradient(70% 60% at 50% 100%, color-mix(in oklab, var(--color-royal-600) 25%, transparent), transparent),
-    linear-gradient(180deg, var(--color-mist-50), var(--color-mist-100));
+    radial-gradient(circle at 50% 50%, rgba(18, 63, 99, 0.4) 0%, rgba(11, 36, 56, 1) 100%);
+}
+
+.bg-mesh-ambient {
+  background-image:
+    radial-gradient(45% 40% at 20% 20%, color-mix(in oklab, var(--color-royal-500) 30%, transparent), transparent),
+    radial-gradient(40% 35% at 85% 15%, color-mix(in oklab, var(--color-gold-500) 18%, transparent), transparent);
+}
+
+@keyframes marquee-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee-scroll 32s linear infinite;
 }
 
 @media (prefers-reduced-motion: reduce) {

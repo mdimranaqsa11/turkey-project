@@ -3,9 +3,10 @@ import { CourseCategories } from "@/components/courses/CourseCategories";
 import { CoursesFAQ } from "@/components/courses/CoursesFAQ";
 
 export const metadata = {
-  title: "Courses | Turkey International Academy",
+  title: "Courses",
   description:
     "Discover TIAMA's comprehensive educational courses — certification, fellowship, postgraduate diploma, and cosmetology & aesthetic training programs.",
+  alternates: { canonical: "/courses" },
 };
 
 export default function CoursesPage() {

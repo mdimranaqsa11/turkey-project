@@ -29,6 +29,15 @@ const name = process.argv[3] || "page";
 
   await page.setViewportSize({ width: 390, height: 844 });
   await page.waitForTimeout(400);
+
+  const mobileHeight = await page.evaluate(() => document.body.scrollHeight);
+  for (let y = 0; y < mobileHeight; y += 300) {
+    await page.evaluate((y) => window.scrollTo(0, y), y);
+    await page.waitForTimeout(100);
+  }
+  await page.evaluate(() => window.scrollTo(0, 0));
+  await page.waitForTimeout(400);
+
   await page.screenshot({ path: path.join(OUT, `${name}-mobile.png`), fullPage: true });
 
   console.log("ERRORS:", JSON.stringify(errors, null, 2));

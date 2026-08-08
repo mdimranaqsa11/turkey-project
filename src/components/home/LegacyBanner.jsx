@@ -12,7 +12,7 @@ const stats = [
 export function LegacyBanner() {
   return (
     <section className="relative overflow-hidden bg-ink-950 py-24 sm:py-28">
-      <div className="absolute inset-0 bg-gradient-to-br from-ink-950 via-ink-800 to-royal-700" />
+      <div className="absolute inset-0 bg-gradient-to-br from-ink-950 via-ink-800 to-royal-600" />
       <div className="pointer-events-none absolute left-1/4 top-0 h-96 w-96 -translate-y-1/2 rounded-full bg-royal-400/30 blur-3xl" />
       <div className="pointer-events-none absolute bottom-0 right-1/4 h-96 w-96 translate-y-1/2 rounded-full bg-gold-400/20 blur-3xl" />
 

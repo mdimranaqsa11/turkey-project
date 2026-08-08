@@ -1,58 +1,62 @@
 import Image from "next/image";
 import { Container } from "@/components/ui/Container";
-import { Reveal, StaggerGroup, StaggerItem } from "@/components/motion/Reveal";
+import { Reveal } from "@/components/motion/Reveal";
 
 const logos = [
-  { src: "/images/home/accred-queen-victoria.jpeg", alt: "Queen Victoria Medical Institute & Research" },
-  { src: "/images/home/accred-royal-physician.jpeg", alt: "The Royal Physician College" },
-  { src: "/images/home/accred-pzaporithzha.png", alt: "Pzaporithzha State Medical University" },
-  { src: "/images/home/accred-bacme.jpeg", alt: "British Association of Continuing Medical Education" },
+  {
+    src: "/images/home/accred-queen-victoria.jpeg",
+    alt: "Queen Victoria Medical Institute & Research",
+  },
+  {
+    src: "/images/home/accred-royal-physician.jpeg",
+    alt: "The Royal Physician College",
+  },
+  {
+    src: "/images/home/accred-pzaporithzha.png",
+    alt: "Pzaporithzha State Medical University",
+  },
+  {
+    src: "/images/home/accred-bacme.jpeg",
+    alt: "British Association of Continuing Medical Education",
+  },
 ];
+
+const track = [...logos, ...logos];
 
 export function AccreditationStrip() {
   return (
-    <section className="border-y border-white/40 bg-mist-50/60 py-16 sm:py-20">
-      <Container className="flex flex-col items-center gap-10">
-        <Reveal>
-          <h2 className="text-center font-display text-2xl font-semibold tracking-tight text-ink-950 sm:text-3xl">
-            Association and{" "}
-            <span className="relative inline-block text-gradient-royal">
-              Accreditation
-              <svg
-                className="absolute -bottom-1.5 left-0 w-full text-gold-500"
-                viewBox="0 0 300 12"
-                fill="none"
-              >
-                <path
-                  d="M5 7 Q 150 2, 295 7"
-                  stroke="currentColor"
-                  strokeWidth="4"
-                  fill="none"
-                  strokeLinecap="round"
-                />
-              </svg>
-            </span>
-          </h2>
-        </Reveal>
+    <section className="border-y border-white/10 bg-ink-900 py-10 sm:py-12">
+      <Reveal className="flex flex-col items-center gap-6">
+        <Container>
+          <p className="text-center text-xs font-bold uppercase tracking-[0.2em] text-mist-200/60">
+            Association &amp; Accreditation
+          </p>
+        </Container>
 
-        <StaggerGroup className="grid w-full grid-cols-2 items-center gap-6 sm:grid-cols-4 sm:gap-10">
-          {logos.map((logo) => (
-            <StaggerItem key={logo.alt}>
-              <div className="glass-panel flex h-28 items-center justify-center rounded-(--radius-md) p-4 transition-transform duration-400 ease-(--ease-premium) hover:-translate-y-1 hover:shadow-(--shadow-glass-lg)">
+        <div className="relative w-full overflow-hidden">
+          <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-24 bg-gradient-to-r from-ink-900 to-transparent" />
+          <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-24 bg-gradient-to-l from-ink-900 to-transparent" />
+
+          <div className="flex w-max animate-marquee items-center gap-16">
+            {track.map((logo, i) => (
+              <div
+                key={`${logo.alt}-${i}`}
+                className="flex h-16 w-36 shrink-0 items-center justify-center rounded-(--radius-sm) bg-mist-50 p-2.5 opacity-80 shadow-(--shadow-glass) transition-opacity duration-300 hover:opacity-100"
+              >
                 <div className="relative h-full w-full">
                   <Image
                     src={logo.src}
                     alt={logo.alt}
                     fill
                     className="object-contain"
-                    sizes="180px"
+                    sizes="144px"
                   />
                 </div>
               </div>
-            </StaggerItem>
-          ))}
-        </StaggerGroup>
-      </Container>
+            ))}
+          </div>
+        </div>
+      </Reveal>
     </section>
   );
 }

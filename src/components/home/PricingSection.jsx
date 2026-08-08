@@ -85,21 +85,21 @@ export function PricingSection() {
                 className="flex h-full flex-col gap-5 p-6 transition-transform duration-400 ease-(--ease-premium) hover:-translate-y-2"
               >
                 <div className="flex items-center justify-between">
-                  <span className="rounded-(--radius-full) bg-royal-100 px-3 py-1 text-xs font-semibold text-royal-600">
+                  <span className="rounded-(--radius-full) border border-royal-400/30 bg-royal-500/15 px-3 py-1 text-xs font-semibold text-royal-300">
                     {plan.tag}
                   </span>
-                  <span className="rounded-(--radius-full) bg-gradient-to-r from-gold-500 to-gold-400 px-3 py-1 text-xs font-bold text-ink-950">
+                  <span className="rounded-(--radius-full) bg-gradient-to-r from-gold-300 to-gold-500 px-3 py-1 text-xs font-bold text-ink-950">
                     {plan.badge}
                   </span>
                 </div>
 
-                <h3 className="font-display text-lg font-semibold leading-snug text-ink-950">
+                <h3 className="font-display text-lg font-semibold leading-snug text-mist-50">
                   {plan.title}
                 </h3>
 
                 <ul className="flex flex-1 flex-col gap-2.5">
                   {plan.features.map((f) => (
-                    <li key={f} className="flex items-start gap-2 text-sm text-ink-700/80">
+                    <li key={f} className="flex items-start gap-2 text-sm text-mist-200/80">
                       <svg
                         width="16"
                         height="16"
@@ -109,7 +109,7 @@ export function PricingSection() {
                         strokeWidth="2.5"
                         strokeLinecap="round"
                         strokeLinejoin="round"
-                        className="mt-0.5 shrink-0 text-royal-500"
+                        className="mt-0.5 shrink-0 text-gold-300"
                       >
                         <path d="M20 6 9 17l-5-5" />
                       </svg>
@@ -118,16 +118,16 @@ export function PricingSection() {
                   ))}
                 </ul>
 
-                <div className="flex flex-col gap-1 border-t border-ink-900/10 pt-4">
+                <div className="flex flex-col gap-1 border-t border-white/10 pt-4">
                   <div className="flex items-baseline gap-2">
-                    <span className="text-sm font-medium text-ink-700/50 line-through">
+                    <span className="text-sm font-medium text-mist-200/40 line-through">
                       {plan.original}
                     </span>
-                    <span className="font-display text-2xl font-bold text-ink-950">
+                    <span className="font-display text-2xl font-bold text-mist-50">
                       {plan.price}
                     </span>
                   </div>
-                  <p className="text-xs text-ink-700/60">{plan.note}</p>
+                  <p className="text-xs text-mist-200/60">{plan.note}</p>
                 </div>
               </GlassCard>
             </StaggerItem>

@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Container } from "@/components/ui/Container";
@@ -9,7 +10,7 @@ const quickLinks = [
   { label: "Home", href: "/" },
   { label: "Courses", href: "/courses" },
   { label: "About", href: "/about" },
-  { label: "Accreditation & CFO", href: "/accreditation-cfo" },
+  { label: "Accreditation & CPD", href: "/accreditation-cpd" },
   { label: "Blog", href: "/blog" },
   { label: "Contact", href: "/contact" },
 ];
@@ -40,6 +41,9 @@ const socials = [
 ];
 
 export function Footer() {
+  const [newsletterEmail, setNewsletterEmail] = useState("");
+  const [subscribed, setSubscribed] = useState(false);
+
   return (
     <footer className="relative mt-24 overflow-hidden bg-ink-950 pt-20">
       <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold-400/50 to-transparent" />
@@ -141,10 +145,10 @@ export function Footer() {
                 <path d="m3 7 9 6 9-6" />
               </svg>
               <a
-                href="mailto:support@turkishinternationalacademy.com"
+                href="mailto:info@turkeyinternationalacademy.com"
                 className="hover:text-white"
               >
-                support@turkishinternationalacademy.com
+                info@turkeyinternationalacademy.com
               </a>
             </li>
             <li className="flex items-start gap-2.5">
@@ -159,8 +163,8 @@ export function Footer() {
               >
                 <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
               </svg>
-              <a href="tel:+9061508 1051" className="hover:text-white">
-                +90 61 508 1051
+              <a href="tel:+90655887051" className="hover:text-white">
+                +90 65 588 7051
               </a>
             </li>
             <li className="flex items-start gap-2.5">
@@ -176,7 +180,7 @@ export function Footer() {
                 <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
                 <circle cx="12" cy="10" r="3" />
               </svg>
-              <span>No.2, Percy Street For Avon Istanbul, Turkey</span>
+              <span>16-C, Percy Street 1st floor, Istanbul, Turkey</span>
             </li>
           </ul>
 
@@ -184,17 +188,34 @@ export function Footer() {
             <p className="text-xs text-mist-100/60">
               Newsletter for updates and offers.
             </p>
-            <form className="flex gap-2" onSubmit={(e) => e.preventDefault()}>
-              <input
-                type="email"
-                required
-                placeholder="Your email"
-                className="glass-panel-dark w-full rounded-(--radius-full) px-4 py-2 text-sm text-white placeholder:text-mist-100/40 focus:outline-none focus:ring-2 focus:ring-gold-400"
-              />
-              <Button type="submit" variant="gold" size="sm">
-                Subscribe
-              </Button>
-            </form>
+            {subscribed ? (
+              <p className="flex items-center gap-1.5 text-sm font-medium text-gold-300">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M20 6 9 17l-5-5" />
+                </svg>
+                Subscribed — thank you!
+              </p>
+            ) : (
+              <form
+                className="flex gap-2"
+                onSubmit={(e) => {
+                  e.preventDefault();
+                  if (newsletterEmail.trim()) setSubscribed(true);
+                }}
+              >
+                <input
+                  type="email"
+                  required
+                  value={newsletterEmail}
+                  onChange={(e) => setNewsletterEmail(e.target.value)}
+                  placeholder="Your email"
+                  className="glass-panel-dark w-full rounded-(--radius-full) px-4 py-2 text-sm text-white placeholder:text-mist-100/40 focus:outline-none focus:ring-2 focus:ring-gold-400"
+                />
+                <Button type="submit" variant="gold" size="sm">
+                  Subscribe
+                </Button>
+              </form>
+            )}
           </div>
         </div>
       </Container>

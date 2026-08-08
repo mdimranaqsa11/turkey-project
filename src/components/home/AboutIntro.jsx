@@ -34,11 +34,11 @@ export function AboutIntro() {
 
         <Reveal direction="left" delay={0.1} className="flex flex-col gap-6">
           <Eyebrow className="w-fit">TIAMA Certified</Eyebrow>
-          <h2 className="font-display text-3xl font-semibold tracking-tight text-ink-950 sm:text-4xl">
+          <h2 className="font-display text-3xl font-semibold tracking-tight text-mist-50 sm:text-4xl">
             Where Trust Meets{" "}
-            <span className="text-gradient-royal">Medical Training</span>
+            <span className="text-gradient-gold">Medical Training</span>
           </h2>
-          <p className="text-base leading-relaxed text-ink-700/80 sm:text-lg">
+          <p className="text-base leading-relaxed text-mist-200/80 sm:text-lg">
             The Turkey International Academy of The Medical Science &amp;
             Aesthetics (TIAMA) Certifications, Fellowship represent a
             globally oriented professional education and certification
@@ -54,7 +54,7 @@ export function AboutIntro() {
             {chips.map((chip) => (
               <div
                 key={chip}
-                className="glass-panel flex items-center gap-2.5 rounded-(--radius-sm) px-4 py-3 text-sm font-medium text-ink-800"
+                className="glass-panel flex items-center gap-2.5 rounded-(--radius-sm) px-4 py-3 text-sm font-medium text-mist-100"
               >
                 <svg
                   width="16"
@@ -65,7 +65,7 @@ export function AboutIntro() {
                   strokeWidth="2.5"
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  className="shrink-0 text-royal-600"
+                  className="shrink-0 text-gold-300"
                 >
                   <path d="M20 6 9 17l-5-5" />
                 </svg>

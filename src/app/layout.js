@@ -1,7 +1,6 @@
 import { Inter, Plus_Jakarta_Sans } from "next/font/google";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
-import { FloatingChatButton } from "@/components/layout/FloatingChatButton";
 import "./globals.css";
 
 const bodyFont = Inter({
@@ -95,7 +94,6 @@ export default function RootLayout({ children }) {
         <Navbar />
         <main className="flex flex-1 flex-col">{children}</main>
         <Footer />
-        <FloatingChatButton />
       </body>
     </html>
   );

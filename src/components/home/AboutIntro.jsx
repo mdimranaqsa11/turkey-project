@@ -39,7 +39,7 @@ export function AboutIntro() {
             <span className="text-gradient-gold">Medical Training</span>
           </h2>
           <p className="text-base leading-relaxed text-mist-200/80 sm:text-lg">
-            The Turkey International Academy of The Medical Science &amp;
+            The Turkish International Academy of The Medical Science &amp;
             Aesthetics (TIAMA) Certifications, Fellowship represent a
             globally oriented professional education and certification
             framework dedicated to upholding high standards of excellence in

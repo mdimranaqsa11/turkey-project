@@ -9,9 +9,9 @@ import { FeatureStrip } from "@/components/home/FeatureStrip";
 import { Testimonials } from "@/components/home/Testimonials";
 
 export const metadata = {
-  title: { absolute: "Turkey International Academy | TIAMA Certification" },
+  title: { absolute: "Turkish International Academy | TIAMA Certification" },
   description:
-    "The Turkey International Academy of The Medical Science & Aesthetics (TIAMA) — globally recognized certification, accreditation, and training for medical and aesthetic professionals.",
+    "The Turkish International Academy of The Medical Science & Aesthetics (TIAMA) — globally recognized certification, accreditation, and training for medical and aesthetic professionals.",
   alternates: { canonical: "/" },
 };
 

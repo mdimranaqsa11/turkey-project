@@ -29,7 +29,7 @@ export function Navbar() {
         <Link href="/" className="flex items-center gap-2.5">
           <Image
             src="/images/logo.png"
-            alt="Turkey International Academy"
+            alt="Turkish International Academy"
             width={40}
             height={40}
             className="h-9 w-9 sm:h-10 sm:w-10"

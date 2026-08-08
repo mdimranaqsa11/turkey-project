@@ -54,7 +54,7 @@ export function FutureSection() {
           </GlassCard>
 
           <p className="text-base leading-relaxed text-mist-200/80">
-            The Turkey International Academy of The Medical Science &amp;
+            The Turkish International Academy of The Medical Science &amp;
             Aesthetics (TIAMA) Certification is a globally recognized
             authority dedicated to upholding the highest standards of
             excellence in the medical science, aesthetic, cosmetology

@@ -17,41 +17,41 @@ const displayFont = Plus_Jakarta_Sans({
 });
 
 const siteUrl = "https://www.turkeyinternationalacademy.com";
-const siteName = "Turkey International Academy (TIAMA)";
+const siteName = "Turkish International Academy (TIAMA)";
 const siteDescription =
-  "Turkey International Academy of The Medical Science & Aesthetics (TIAMA) — globally recognized certification, accreditation, and training for medical and aesthetic professionals.";
+  "Turkish International Academy of The Medical Science & Aesthetics (TIAMA) — globally recognized certification, accreditation, and training for medical and aesthetic professionals.";
 
 export const metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Turkey International Academy | TIAMA Certification",
-    template: "%s | Turkey International Academy",
+    default: "Turkish International Academy | TIAMA Certification",
+    template: "%s | Turkish International Academy",
   },
   description: siteDescription,
   keywords: [
     "TIAMA",
-    "Turkey International Academy",
+    "Turkish International Academy",
     "medical aesthetics certification",
     "CPD accreditation",
     "cosmetology training",
     "fellowship programs",
     "medical science education",
   ],
-  authors: [{ name: "Turkey International Academy" }],
+  authors: [{ name: "Turkish International Academy" }],
   robots: { index: true, follow: true },
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",
     url: siteUrl,
     siteName,
-    title: "Turkey International Academy | TIAMA Certification",
+    title: "Turkish International Academy | TIAMA Certification",
     description: siteDescription,
     locale: "en_US",
     images: [{ url: "/images/logo.png", width: 589, height: 617, alt: siteName }],
   },
   twitter: {
     card: "summary",
-    title: "Turkey International Academy | TIAMA Certification",
+    title: "Turkish International Academy | TIAMA Certification",
     description: siteDescription,
     images: ["/images/logo.png"],
   },

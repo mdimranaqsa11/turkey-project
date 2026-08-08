@@ -54,7 +54,7 @@ export function Footer() {
           <Link href="/" className="flex items-center gap-2.5">
             <Image
               src="/images/logo.png"
-              alt="Turkey International Academy"
+              alt="Turkish International Academy"
               width={40}
               height={40}
               className="h-10 w-10"
@@ -64,7 +64,7 @@ export function Footer() {
             </span>
           </Link>
           <p className="max-w-xs text-sm leading-relaxed text-mist-100/60">
-            Turkey International Academy of The Medical Science &amp; Aesthetics
+            Turkish International Academy of The Medical Science &amp; Aesthetics
             — a globally recognized authority upholding the highest standards of
             excellence in medical science, aesthetics, and cosmetology
             education.
@@ -227,7 +227,7 @@ export function Footer() {
             <span className="text-gold-300">TIA-TR-YKSB-2020-1042</span>
           </p>
           <p className="text-xs text-mist-100/50">
-            © 2026 Turkey International Academy. All rights reserved. ·{" "}
+            © 2026 Turkish International Academy. All rights reserved. ·{" "}
             <Link href="/privacy-policy" className="hover:text-white">
               Privacy Policy
             </Link>{" "}

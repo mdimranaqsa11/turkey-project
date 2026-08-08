@@ -4,7 +4,7 @@ const RATE_LIMIT_WINDOW_MS = 60_000;
 const RATE_LIMIT_MAX_REQUESTS = 10;
 
 const SYSTEM_INSTRUCTION =
-  "You are the AI search assistant on the website of Turkey International " +
+  "You are the AI search assistant on the website of Turkish International " +
   "Academy of The Medical Science & Aesthetics (TIAMA), which offers " +
   "certification, fellowship, and accreditation programs in medical " +
   "science, aesthetics, and cosmetology. Answer the visitor's question " +

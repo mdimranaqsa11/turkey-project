@@ -228,21 +228,31 @@ export function Footer() {
       </Container>
 
       <div className="relative z-10 border-t border-white/10 py-6">
-        <Container className="flex flex-col items-center justify-between gap-3 text-center sm:flex-row sm:text-left">
+        <Container className="flex flex-col items-center justify-between gap-4 text-center sm:flex-row sm:text-left">
           <p className="text-xs text-mist-100/50">
             Registered International Training Provider, Est. 2020 ·{" "}
             <span className="text-gold-300">TIA-TR-YKSB-2020-1042</span>
           </p>
           <p className="text-xs text-mist-100/50">
-            © 2026 Turkish International Academy. All rights reserved. ·{" "}
-            <Link href="/privacy-policy" className="hover:text-white">
-              Privacy Policy
-            </Link>{" "}
-            ·{" "}
-            <Link href="/terms" className="hover:text-white">
-              Terms of Use
-            </Link>
+            © 2026 Turkish International Academy. All rights reserved.
           </p>
+          <nav
+            aria-label="Legal"
+            className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2"
+          >
+            <Link
+              href="/privacy-policy"
+              className="text-xs font-semibold text-mist-100/80 underline decoration-gold-400/40 underline-offset-4 transition-colors hover:text-gold-300 hover:decoration-gold-300"
+            >
+              Privacy Policy
+            </Link>
+            <Link
+              href="/terms"
+              className="text-xs font-semibold text-mist-100/80 underline decoration-gold-400/40 underline-offset-4 transition-colors hover:text-gold-300 hover:decoration-gold-300"
+            >
+              Terms &amp; Conditions
+            </Link>
+          </nav>
         </Container>
       </div>
     </footer>

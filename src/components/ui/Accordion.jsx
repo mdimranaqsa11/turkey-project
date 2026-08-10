@@ -12,7 +12,7 @@ export function Accordion({ items, className }) {
       {items.map((item, i) => {
         const isOpen = i === openIndex;
         return (
-          <div key={item.question} className="glass-panel-strong overflow-hidden rounded-(--radius-md)">
+          <div key={item.question} className="glass-panel-strong rounded-(--radius-md)">
             <button
               type="button"
               onClick={() => setOpenIndex(isOpen ? -1 : i)}

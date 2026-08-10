@@ -6,7 +6,7 @@ const embedUrl = `https://www.google.com/maps?q=${encodeURIComponent(address)}&o
 
 export function GoogleMapEmbed() {
   return (
-    <GlassCard variant="strong" className="relative overflow-hidden rounded-(--radius-lg) p-2">
+    <GlassCard variant="strong" className="relative rounded-(--radius-lg) p-2">
       <a
         href={mapsUrl}
         target="_blank"

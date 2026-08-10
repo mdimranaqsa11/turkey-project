@@ -20,7 +20,7 @@ export function FutureSection() {
         <Reveal direction="right">
           <div className="relative mx-auto max-w-sm">
             <div className="pointer-events-none absolute -inset-6 -z-10 rounded-(--radius-xl) bg-gradient-to-tr from-gold-400/25 to-royal-400/20 blur-2xl" />
-            <GlassCard variant="strong" className="overflow-hidden p-3">
+            <GlassCard variant="strong" className="p-3">
               <div className="relative aspect-[3/4] w-full overflow-hidden rounded-(--radius-md)">
                 <Image
                   src="/images/home/portrait-professional.jpeg"

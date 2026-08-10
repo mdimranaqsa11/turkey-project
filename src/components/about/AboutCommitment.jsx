@@ -79,7 +79,7 @@ export function AboutCommitment() {
 
         <Reveal direction="left" delay={0.1} className="relative mx-auto w-full max-w-md">
           <div className="pointer-events-none absolute -inset-6 -z-10 rounded-(--radius-xl) bg-gradient-to-br from-gold-400/25 to-royal-400/20 blur-2xl" />
-          <GlassCard variant="strong" className="overflow-hidden p-3">
+          <GlassCard variant="strong" className="p-3">
             <div className="relative aspect-[4/5] w-full overflow-hidden rounded-(--radius-md)">
               <Image
                 src="/images/about/tukeish_doc.jpg"

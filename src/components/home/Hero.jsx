@@ -37,7 +37,20 @@ export function Hero() {
   const slide = slides[index];
 
   return (
-    <section className="relative isolate flex min-h-screen items-center overflow-hidden bg-mesh-hero px-6 pb-20 pt-28 sm:px-8 sm:pt-32">
+    <section className="relative isolate flex min-h-[100dvh] items-center overflow-hidden bg-mesh-hero px-6 pb-20 pt-28 sm:px-8 sm:pt-32">
+      <div className="absolute inset-0 -z-10">
+        <Image
+          src="/images/home/hero-seminar.jpeg"
+          alt="Medical and aesthetics professionals at a TIAMA seminar"
+          fill
+          priority
+          className="object-cover object-center"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-ink-950 via-ink-950/85 to-ink-950/55" />
+        <div className="absolute inset-0 bg-gradient-to-t from-ink-950 via-ink-950/20 to-transparent" />
+      </div>
+
       <div className="pointer-events-none absolute left-1/4 top-1/4 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-royal-600/40 blur-[120px]" />
       <div className="pointer-events-none absolute bottom-1/4 right-1/4 h-[500px] w-[500px] translate-x-1/2 translate-y-1/2 rounded-full bg-gold-500/20 blur-[100px]" />
 
@@ -95,7 +108,6 @@ export function Hero() {
               src="/images/home/hero-seminar.jpeg"
               alt="Medical and aesthetics professionals at a TIAMA seminar"
               fill
-              priority
               className="object-cover object-center"
               sizes="40vw"
             />

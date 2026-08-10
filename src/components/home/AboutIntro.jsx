@@ -19,9 +19,9 @@ export function AboutIntro() {
           <div className="relative">
             <div className="pointer-events-none absolute -inset-6 -z-10 rounded-(--radius-xl) bg-gradient-to-br from-royal-300/40 to-gold-300/30 blur-2xl" />
             <GlassCard variant="strong" className="p-3">
-              <div className="relative aspect-[4/5] w-full overflow-hidden rounded-(--radius-md)">
+              <div className="relative aspect-[16/9] w-full overflow-hidden rounded-(--radius-md)">
                 <Image
-                  src="/images/home/about-doctors.jpeg"
+                  src="/images/home/about-doctors-group.jpg"
                   alt="TIAMA-certified medical professionals"
                   fill
                   className="object-cover"

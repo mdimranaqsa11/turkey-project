@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import { AnimatePresence, motion } from "framer-motion";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { cn } from "@/lib/utils";
@@ -55,15 +54,7 @@ export function Hero() {
       <div className="pointer-events-none absolute bottom-1/4 right-1/4 h-[500px] w-[500px] translate-x-1/2 translate-y-1/2 rounded-full bg-gold-500/20 blur-[100px]" />
 
       <Container className="relative z-10 grid grid-cols-1 items-center gap-12 lg:grid-cols-12 lg:gap-8">
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -16 }}
-            transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-            className="relative z-20 flex flex-col gap-6 lg:col-span-7"
-          >
+        <div className="relative z-20 flex flex-col gap-6 lg:col-span-7">
             <span className="glass-panel-dark inline-flex w-fit items-center gap-2 rounded-(--radius-full) px-4 py-1.5 text-xs font-bold uppercase tracking-[0.14em] text-gold-300">
               {slide.eyebrow}
             </span>
@@ -99,8 +90,7 @@ export function Hero() {
               Global Internal Qualification Registration ID ·{" "}
               <span className="text-gold-300">TIA-TR-YKSB-2020-1042</span>
             </p>
-          </motion.div>
-        </AnimatePresence>
+        </div>
 
         <div className="relative hidden h-[600px] lg:col-span-5 lg:block">
           <div className="absolute inset-0 overflow-hidden rounded-(--radius-lg) border border-white/10 opacity-80">

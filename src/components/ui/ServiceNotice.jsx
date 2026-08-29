@@ -1,13 +1,8 @@
-import { motion } from "framer-motion";
 import { GlassCard } from "@/components/ui/GlassCard";
 
 export function ServiceNotice({ className }) {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 10 }}
-      animate={{ opacity: 1, y: 0 }}
-      className={className}
-    >
+    <div className={className}>
       <GlassCard
         variant="light"
         className="flex flex-col items-center gap-3 rounded-(--radius-md) p-6 text-center"
@@ -31,6 +26,6 @@ export function ServiceNotice({ className }) {
           and our team will be happy to help.
         </p>
       </GlassCard>
-    </motion.div>
+    </div>
   );
 }

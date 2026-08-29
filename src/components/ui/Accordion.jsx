@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 export function Accordion({ items, className }) {
@@ -33,21 +32,13 @@ export function Accordion({ items, className }) {
                 </svg>
               </span>
             </button>
-            <AnimatePresence initial={false}>
-              {isOpen && (
-                <motion.div
-                  initial={{ height: 0, opacity: 0 }}
-                  animate={{ height: "auto", opacity: 1 }}
-                  exit={{ height: 0, opacity: 0 }}
-                  transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-                  className="overflow-hidden"
-                >
-                  <p className="px-5 pb-5 text-sm leading-relaxed text-mist-200/80 sm:px-6 sm:pb-6 sm:text-base">
-                    {item.answer}
-                  </p>
-                </motion.div>
-              )}
-            </AnimatePresence>
+            {isOpen && (
+              <div className="overflow-hidden">
+                <p className="px-5 pb-5 text-sm leading-relaxed text-mist-200/80 sm:px-6 sm:pb-6 sm:text-base">
+                  {item.answer}
+                </p>
+              </div>
+            )}
           </div>
         );
       })}

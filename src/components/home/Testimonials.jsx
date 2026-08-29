@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { GlassCard } from "@/components/ui/GlassCard";
@@ -81,34 +80,26 @@ export function Testimonials() {
         />
 
         <div className="relative w-full max-w-3xl">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -12 }}
-              transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-            >
-              <GlassCard variant="strong" className="flex flex-col items-center gap-6 px-6 py-10 text-center sm:px-14">
-                <span className="font-display text-6xl leading-none text-gold-400/60">&ldquo;</span>
-                <Stars />
-                <p className="text-base leading-relaxed text-mist-100/90 sm:text-lg">
-                  {t.quote}
-                </p>
-                <div className="flex items-center gap-3">
-                  <span className="flex h-11 w-11 items-center justify-center rounded-full bg-gradient-to-br from-royal-500 to-gold-400 font-display text-lg font-bold text-ink-950">
-                    {t.initial}
-                  </span>
-                  <div className="text-left">
-                    <p className="text-sm font-bold uppercase tracking-wide text-mist-50">
-                      {t.name}
-                    </p>
-                    <p className="text-xs font-medium text-gold-300">TIAMA Certified</p>
-                  </div>
+          <div>
+            <GlassCard variant="strong" className="flex flex-col items-center gap-6 px-6 py-10 text-center sm:px-14">
+              <span className="font-display text-6xl leading-none text-gold-400/60">&ldquo;</span>
+              <Stars />
+              <p className="text-base leading-relaxed text-mist-100/90 sm:text-lg">
+                {t.quote}
+              </p>
+              <div className="flex items-center gap-3">
+                <span className="flex h-11 w-11 items-center justify-center rounded-full bg-gradient-to-br from-royal-500 to-gold-400 font-display text-lg font-bold text-ink-950">
+                  {t.initial}
+                </span>
+                <div className="text-left">
+                  <p className="text-sm font-bold uppercase tracking-wide text-mist-50">
+                    {t.name}
+                  </p>
+                  <p className="text-xs font-medium text-gold-300">TIAMA Certified</p>
                 </div>
-              </GlassCard>
-            </motion.div>
-          </AnimatePresence>
+              </div>
+            </GlassCard>
+          </div>
 
           <button
             type="button"

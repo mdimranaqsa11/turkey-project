@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
 import { Container } from "@/components/ui/Container";
 import { GlassCard } from "@/components/ui/GlassCard";
 import { Eyebrow } from "@/components/ui/SectionHeading";
@@ -127,16 +126,8 @@ export function AISearch() {
             ))}
           </StaggerGroup>
 
-          <AnimatePresence mode="wait">
-            {(answer || error) && (
-              <motion.div
-                key={answer ? "answer" : "error"}
-                initial={{ opacity: 0, y: 12 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -8 }}
-                transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-                className="mt-6"
-              >
+          {(answer || error) && (
+            <div className="mt-6">
                 <GlassCard
                   variant="light"
                   className={cn(
@@ -163,9 +154,8 @@ export function AISearch() {
                     </div>
                   )}
                 </GlassCard>
-              </motion.div>
-            )}
-          </AnimatePresence>
+            </div>
+          )}
         </Reveal>
       </Container>
     </section>

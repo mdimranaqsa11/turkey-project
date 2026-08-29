@@ -1,7 +1,6 @@
 "use client";
 
 import { useId, useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
 import { GlassCard } from "@/components/ui/GlassCard";
 import { Button } from "@/components/ui/Button";
 import { FormField } from "@/components/ui/FormField";
@@ -71,28 +70,24 @@ export function ContactForm() {
         Send Us a Message
       </h2>
 
-      <AnimatePresence mode="wait">
-        {submitted ? (
-          <div key="notice" className="flex flex-col items-center gap-4 py-4">
-            <ServiceNotice className="w-full" />
-            <Button
-              type="button"
-              variant="glass"
-              size="sm"
-              onClick={() => setSubmitted(false)}
-            >
-              Back to form
-            </Button>
-          </div>
-        ) : (
-          <motion.form
-            key="form"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            onSubmit={handleSubmit}
-            noValidate
-            className="flex flex-col gap-5"
+      {submitted ? (
+        <div className="flex flex-col items-center gap-4 py-4">
+          <ServiceNotice className="w-full" />
+          <Button
+            type="button"
+            variant="glass"
+            size="sm"
+            onClick={() => setSubmitted(false)}
           >
+            Back to form
+          </Button>
+        </div>
+      ) : (
+        <form
+          onSubmit={handleSubmit}
+          noValidate
+          className="flex flex-col gap-5"
+        >
             <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
               <FormField
                 label="Full Name *"
@@ -241,9 +236,8 @@ export function ContactForm() {
               </svg>
               We typically respond within 24 hours
             </p>
-          </motion.form>
-        )}
-      </AnimatePresence>
+        </form>
+      )}
     </GlassCard>
   );
 }

@@ -56,12 +56,12 @@ const advantages = [
 function AdvantageCard({ item }) {
   return (
     <GlassCard variant="strong" className="flex items-start gap-4 rounded-(--radius-md) p-5">
-      <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-(--radius-sm) bg-gradient-to-br from-gold-300 to-gold-500 text-ink-950">
+      <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-(--radius-sm) bg-gold text-navy-deep">
         {item.icon}
       </span>
       <div>
-        <h3 className="font-display text-base font-bold text-mist-50">{item.title}</h3>
-        <p className="mt-1 text-sm leading-relaxed text-mist-200/75">{item.description}</p>
+        <h3 className="font-display text-base font-bold text-navy">{item.title}</h3>
+        <p className="mt-1 text-sm leading-relaxed text-muted">{item.description}</p>
       </div>
     </GlassCard>
   );
@@ -69,21 +69,19 @@ function AdvantageCard({ item }) {
 
 export function AboutAdvantages() {
   return (
-    <section className="relative overflow-hidden py-24 sm:py-32">
-      <div className="pointer-events-none absolute right-0 top-1/3 h-96 w-96 rounded-full bg-royal-500/20 blur-3xl" />
-
+    <section className="py-24 sm:py-32">
       <Container className="flex flex-col items-center gap-16">
         <Reveal className="flex max-w-2xl flex-col items-center gap-4 text-center">
-          <h2 className="font-display text-3xl font-semibold tracking-tight text-mist-50 sm:text-4xl">
+          <h2 className="font-display text-3xl font-semibold tracking-tight text-navy sm:text-4xl">
             Akademimizi seçmenin{" "}
-            <span className="relative inline-block text-gradient-gold">
+            <span className="relative inline-block text-gold-dark">
               avantajları
-              <svg className="absolute -bottom-1.5 left-0 w-full text-gold-400" viewBox="0 0 300 12" fill="none">
+              <svg className="absolute -bottom-1.5 left-0 w-full text-gold" viewBox="0 0 300 12" fill="none">
                 <path d="M5 7 Q 150 2, 295 7" stroke="currentColor" strokeWidth="4" fill="none" strokeLinecap="round" />
               </svg>
             </span>
           </h2>
-          <p className="text-base leading-relaxed text-mist-200/75 sm:text-lg">
+          <p className="text-base leading-relaxed text-muted sm:text-lg">
             Uluslararası tanınırlık, uzman rehberliği ve estetik eğitimde
             mükemmellik taahhüdü ile desteklenen dünya standartlarında
             sertifika programlarını deneyimleyin.
@@ -92,7 +90,7 @@ export function AboutAdvantages() {
 
         {/* Desktop: circular image with floating cards */}
         <div className="relative hidden w-full max-w-4xl items-center justify-center lg:flex">
-          <Reveal className="relative z-10 h-72 w-72 shrink-0 overflow-hidden rounded-full border border-white/15 shadow-(--shadow-glass-lg)">
+          <Reveal className="relative z-10 h-72 w-72 shrink-0 overflow-hidden rounded-full border border-border shadow-(--shadow-md)">
             <Image
               src="/images/about/team-circle.jpeg"
               alt="TIAMA expert faculty"
@@ -124,7 +122,7 @@ export function AboutAdvantages() {
 
         {/* Mobile / tablet: circular image + stacked cards */}
         <div className="flex w-full flex-col items-center gap-8 lg:hidden">
-          <Reveal className="relative h-56 w-56 shrink-0 overflow-hidden rounded-full border border-white/15 shadow-(--shadow-glass-lg) sm:h-64 sm:w-64">
+          <Reveal className="relative h-56 w-56 shrink-0 overflow-hidden rounded-full border border-border shadow-(--shadow-md) sm:h-64 sm:w-64">
             <Image
               src="/images/about/team-circle.jpeg"
               alt="TIAMA expert faculty"

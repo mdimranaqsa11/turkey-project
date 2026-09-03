@@ -16,7 +16,7 @@ export default function BlogPage() {
         title={
           <>
             Discover the Latest{" "}
-            <span className="text-gradient-gold">News &amp; Articles</span>
+            <span className="text-gold-light">News &amp; Articles</span>
           </>
         }
         description="Stay updated with the latest trends, insights, and innovations in medical aesthetics and cosmetology education."

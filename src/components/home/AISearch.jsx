@@ -66,11 +66,11 @@ export function AISearch() {
             <SparkleIcon className="h-3.5 w-3.5" />
             AI Search
           </Eyebrow>
-          <h2 className="font-display text-3xl font-semibold tracking-tight text-mist-50 sm:text-4xl">
+          <h2 className="font-display text-3xl font-semibold tracking-tight text-navy sm:text-4xl">
             Ask anything about{" "}
-            <span className="text-gradient-gold">medical education</span>
+            <span className="text-gold-dark">medical education</span>
           </h2>
-          <p className="text-base leading-relaxed text-mist-200/75">
+          <p className="text-base leading-relaxed text-muted">
             Get instant answers about certification, fellowship, and
             accreditation — powered by AI.
           </p>
@@ -82,20 +82,20 @@ export function AISearch() {
               variant="strong"
               className="flex items-center gap-3 rounded-(--radius-full) p-2 pl-5"
             >
-              <SparkleIcon className="h-5 w-5 shrink-0 text-gold-300" />
+              <SparkleIcon className="h-5 w-5 shrink-0 text-gold-dark" />
               <input
                 type="text"
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
                 placeholder="Ask anything about certification, fellowships, or accreditation..."
                 maxLength={500}
-                className="w-full bg-transparent text-sm text-mist-50 placeholder:text-mist-200/40 focus:outline-none sm:text-base"
+                className="w-full bg-transparent text-sm text-navy placeholder:text-muted/60 focus:outline-none sm:text-base"
               />
               <button
                 type="submit"
                 disabled={loading || !query.trim()}
                 aria-label="Search"
-                className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-gold-300 to-gold-500 text-ink-950 transition-transform duration-300 ease-(--ease-premium) hover:scale-105 disabled:opacity-40 disabled:hover:scale-100"
+                className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-gold text-navy-deep disabled:opacity-40"
               >
                 {loading ? (
                   <svg className="h-4 w-4 animate-spin" viewBox="0 0 24 24" fill="none">
@@ -118,7 +118,7 @@ export function AISearch() {
                   type="button"
                   onClick={() => runSearch(s)}
                   disabled={loading}
-                  className="glass-panel rounded-(--radius-full) px-4 py-2 text-xs font-medium text-mist-200/85 transition-colors hover:text-gold-300 disabled:opacity-50 sm:text-sm"
+                  className="rounded-(--radius-full) border border-border bg-white px-4 py-2 text-xs font-medium text-muted hover:text-gold-dark disabled:opacity-50 sm:text-sm"
                 >
                   {s}
                 </button>
@@ -145,10 +145,10 @@ export function AISearch() {
                     </p>
                   ) : (
                     <div className="flex items-start gap-3">
-                      <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-gold-300 to-gold-500 text-ink-950">
+                      <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-gold text-navy-deep">
                         <SparkleIcon className="h-4 w-4" />
                       </span>
-                      <p className="whitespace-pre-line text-sm leading-relaxed text-mist-100 sm:text-base">
+                      <p className="whitespace-pre-line text-sm leading-relaxed text-text sm:text-base">
                         {answer}
                       </p>
                     </div>

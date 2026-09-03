@@ -17,7 +17,6 @@ export function AboutIntro() {
       <Container className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
         <Reveal direction="right">
           <div className="relative">
-            <div className="pointer-events-none absolute -inset-6 -z-10 rounded-(--radius-xl) bg-gradient-to-br from-royal-300/40 to-gold-300/30 blur-2xl" />
             <GlassCard variant="strong" className="p-3">
               <div className="relative aspect-[16/9] w-full overflow-hidden rounded-(--radius-md)">
                 <Image
@@ -34,11 +33,11 @@ export function AboutIntro() {
 
         <Reveal direction="left" delay={0.1} className="flex flex-col gap-6">
           <Eyebrow className="w-fit">TIAMA Certified</Eyebrow>
-          <h2 className="font-display text-3xl font-semibold tracking-tight text-mist-50 sm:text-4xl">
+          <h2 className="font-display text-3xl font-semibold tracking-tight text-navy sm:text-4xl">
             Where Trust Meets{" "}
-            <span className="text-gradient-gold">Medical Training</span>
+            <span className="text-gold-dark">Medical Training</span>
           </h2>
-          <p className="text-base leading-relaxed text-mist-200/80 sm:text-lg">
+          <p className="text-base leading-relaxed text-muted sm:text-lg">
             The Turkish International Academy of The Medical Science &amp;
             Aesthetics (TIAMA) Certifications, Fellowship represent a
             globally oriented professional education and certification
@@ -54,7 +53,7 @@ export function AboutIntro() {
             {chips.map((chip) => (
               <div
                 key={chip}
-                className="glass-panel flex items-center gap-2.5 rounded-(--radius-sm) px-4 py-3 text-sm font-medium text-mist-100"
+                className="flex items-center gap-2.5 rounded-(--radius-sm) border border-border bg-white px-4 py-3 text-sm font-medium text-text"
               >
                 <svg
                   width="16"
@@ -65,7 +64,7 @@ export function AboutIntro() {
                   strokeWidth="2.5"
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  className="shrink-0 text-gold-300"
+                  className="shrink-0 text-gold-dark"
                 >
                   <path d="M20 6 9 17l-5-5" />
                 </svg>

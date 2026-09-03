@@ -80,26 +80,23 @@ export function PricingSection() {
         <StaggerGroup className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {plans.map((plan) => (
             <StaggerItem key={plan.title}>
-              <GlassCard
-                variant="strong"
-                className="flex h-full flex-col gap-5 p-6 transition-transform duration-400 ease-(--ease-premium) hover:-translate-y-2"
-              >
+              <GlassCard variant="strong" className="flex h-full flex-col gap-5 p-6">
                 <div className="flex items-center justify-between">
-                  <span className="rounded-(--radius-full) border border-royal-400/30 bg-royal-500/15 px-3 py-1 text-xs font-semibold text-royal-300">
+                  <span className="rounded-(--radius-full) border border-blue/30 bg-blue-soft px-3 py-1 text-xs font-semibold text-blue">
                     {plan.tag}
                   </span>
-                  <span className="rounded-(--radius-full) bg-gradient-to-r from-gold-300 to-gold-500 px-3 py-1 text-xs font-bold text-ink-950">
+                  <span className="rounded-(--radius-full) bg-gold px-3 py-1 text-xs font-bold text-navy-deep">
                     {plan.badge}
                   </span>
                 </div>
 
-                <h3 className="font-display text-lg font-semibold leading-snug text-mist-50">
+                <h3 className="font-display text-lg font-semibold leading-snug text-navy">
                   {plan.title}
                 </h3>
 
                 <ul className="flex flex-1 flex-col gap-2.5">
                   {plan.features.map((f) => (
-                    <li key={f} className="flex items-start gap-2 text-sm text-mist-200/80">
+                    <li key={f} className="flex items-start gap-2 text-sm text-muted">
                       <svg
                         width="16"
                         height="16"
@@ -109,7 +106,7 @@ export function PricingSection() {
                         strokeWidth="2.5"
                         strokeLinecap="round"
                         strokeLinejoin="round"
-                        className="mt-0.5 shrink-0 text-gold-300"
+                        className="mt-0.5 shrink-0 text-gold-dark"
                       >
                         <path d="M20 6 9 17l-5-5" />
                       </svg>
@@ -118,16 +115,16 @@ export function PricingSection() {
                   ))}
                 </ul>
 
-                <div className="flex flex-col gap-1 border-t border-white/10 pt-4">
+                <div className="flex flex-col gap-1 border-t border-border pt-4">
                   <div className="flex items-baseline gap-2">
-                    <span className="text-sm font-medium text-mist-200/40 line-through">
+                    <span className="text-sm font-medium text-muted line-through">
                       {plan.original}
                     </span>
-                    <span className="font-display text-2xl font-bold text-mist-50">
+                    <span className="font-display text-2xl font-bold text-navy">
                       {plan.price}
                     </span>
                   </div>
-                  <p className="text-xs text-mist-200/60">{plan.note}</p>
+                  <p className="text-xs text-muted">{plan.note}</p>
                 </div>
               </GlassCard>
             </StaggerItem>
@@ -137,13 +134,13 @@ export function PricingSection() {
         <Reveal>
           <GlassCard
             variant="dark"
-            className="flex flex-col items-center gap-8 overflow-hidden px-6 py-12 text-center sm:px-12"
+            className="flex flex-col items-center gap-8 px-6 py-12 text-center sm:px-12"
           >
             <div className="flex flex-col gap-4">
               <h3 className="font-display text-2xl font-semibold text-white sm:text-3xl">
                 Ready to Achieve Global Recognition?
               </h3>
-              <p className="mx-auto max-w-2xl text-sm leading-relaxed text-mist-100/75 sm:text-base">
+              <p className="mx-auto max-w-2xl text-sm leading-relaxed text-white/75 sm:text-base">
                 Join over 200 certified institutions across 50+ countries.
                 Elevate your practice with TIAMA&apos;s internationally
                 recognized standards of excellence.
@@ -154,7 +151,12 @@ export function PricingSection() {
               <Button href="/apply" variant="gold" size="lg">
                 Apply for Certification
               </Button>
-              <Button href="/contact" variant="glass" size="lg" className="text-white">
+              <Button
+                href="/contact"
+                variant="ghost"
+                size="lg"
+                className="border border-white/30 text-white hover:bg-white/10 hover:text-white"
+              >
                 Schedule Consultation
               </Button>
             </div>
@@ -162,17 +164,17 @@ export function PricingSection() {
             <div className="grid w-full grid-cols-2 gap-6 border-t border-white/10 pt-8 sm:grid-cols-4">
               {stats.map((stat) => (
                 <div key={stat.label} className="flex flex-col items-center gap-1">
-                  <span className="font-display text-3xl font-bold text-gold-300 sm:text-4xl">
+                  <span className="font-display text-3xl font-bold text-gold-light sm:text-4xl">
                     <Counter value={stat.value} suffix={stat.suffix} />
                   </span>
-                  <span className="text-xs text-mist-100/70 sm:text-sm">{stat.label}</span>
+                  <span className="text-xs text-white/70 sm:text-sm">{stat.label}</span>
                 </div>
               ))}
             </div>
 
-            <p className="text-xs font-medium tracking-wide text-mist-100/50">
+            <p className="text-xs font-medium tracking-wide text-white/50">
               Global Internal Qualification Registration ID ·{" "}
-              <span className="text-gold-300">TIA-TR-YKSB-2020-1042</span>
+              <span className="text-gold-light">TIA-TR-YKSB-2020-1042</span>
             </p>
           </GlassCard>
         </Reveal>

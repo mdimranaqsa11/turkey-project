@@ -45,11 +45,8 @@ export function Footer() {
   const [subscribed, setSubscribed] = useState(false);
 
   return (
-    <footer className="relative mt-24 overflow-hidden bg-ink-950 pt-20">
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold-400/50 to-transparent" />
-      <div className="pointer-events-none absolute -left-24 top-0 h-72 w-72 rounded-full bg-royal-500/20 blur-3xl" />
-
-      <Container className="relative z-10 grid grid-cols-1 gap-12 pb-14 sm:grid-cols-2 lg:grid-cols-4">
+    <footer className="mt-24 bg-navy-deep pt-20">
+      <Container className="grid grid-cols-1 gap-12 pb-14 sm:grid-cols-2 lg:grid-cols-4">
         <div className="flex flex-col gap-5">
           <Link href="/" className="flex items-center gap-2.5">
             <Image
@@ -63,7 +60,7 @@ export function Footer() {
               TIAMA
             </span>
           </Link>
-          <p className="max-w-xs text-sm leading-relaxed text-mist-100/60">
+          <p className="max-w-xs text-sm leading-relaxed text-white/60">
             Türkiye Uluslararası Tıp Bilimleri ve Estetik Akademisi – Tıbbi
             eğitimde ve estetik mükemmellikte dünya çapında öncülük ediyor.
           </p>
@@ -73,7 +70,7 @@ export function Footer() {
                 key={s.label}
                 href={s.href}
                 aria-label={s.label}
-                className="glass-panel-dark flex h-9 w-9 items-center justify-center rounded-full text-mist-100 transition-transform duration-300 hover:-translate-y-0.5 hover:text-gold-300"
+                className="flex h-9 w-9 items-center justify-center rounded-full border border-white/20 text-white hover:text-gold-light"
               >
                 <svg
                   width="16"
@@ -89,7 +86,7 @@ export function Footer() {
         </div>
 
         <div className="flex flex-col gap-4">
-          <h3 className="text-sm font-bold uppercase tracking-wide text-gold-300">
+          <h3 className="text-sm font-bold uppercase tracking-wide text-gold-light">
             Quick Links
           </h3>
           <ul className="flex flex-col gap-2.5">
@@ -97,7 +94,7 @@ export function Footer() {
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className="text-sm text-mist-100/70 transition-colors hover:text-white"
+                  className="text-sm text-white/70 hover:text-white"
                 >
                   {link.label}
                 </Link>
@@ -107,7 +104,7 @@ export function Footer() {
         </div>
 
         <div className="flex flex-col gap-4">
-          <h3 className="text-sm font-bold uppercase tracking-wide text-gold-300">
+          <h3 className="text-sm font-bold uppercase tracking-wide text-gold-light">
             Popular Courses
           </h3>
           <ul className="flex flex-col gap-2.5">
@@ -115,7 +112,7 @@ export function Footer() {
               <li key={course}>
                 <Link
                   href="/courses"
-                  className="text-sm text-mist-100/70 transition-colors hover:text-white"
+                  className="text-sm text-white/70 hover:text-white"
                 >
                   {course}
                 </Link>
@@ -125,10 +122,10 @@ export function Footer() {
         </div>
 
         <div className="flex flex-col gap-4">
-          <h3 className="text-sm font-bold uppercase tracking-wide text-gold-300">
+          <h3 className="text-sm font-bold uppercase tracking-wide text-gold-light">
             Contact Us
           </h3>
-          <ul className="flex flex-col gap-3 text-sm text-mist-100/70">
+          <ul className="flex flex-col gap-3 text-sm text-white/70">
             <li className="flex items-start gap-2.5">
               <svg
                 width="16"
@@ -137,7 +134,7 @@ export function Footer() {
                 fill="none"
                 stroke="currentColor"
                 strokeWidth="2"
-                className="mt-0.5 shrink-0 text-gold-300"
+                className="mt-0.5 shrink-0 text-gold-light"
               >
                 <rect x="3" y="5" width="18" height="14" rx="2" />
                 <path d="m3 7 9 6 9-6" />
@@ -157,7 +154,7 @@ export function Footer() {
                 fill="none"
                 stroke="currentColor"
                 strokeWidth="2"
-                className="mt-0.5 shrink-0 text-gold-300"
+                className="mt-0.5 shrink-0 text-gold-light"
               >
                 <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
               </svg>
@@ -173,7 +170,7 @@ export function Footer() {
                 fill="none"
                 stroke="currentColor"
                 strokeWidth="2"
-                className="mt-0.5 shrink-0 text-gold-300"
+                className="mt-0.5 shrink-0 text-gold-light"
               >
                 <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
                 <circle cx="12" cy="10" r="3" />
@@ -183,11 +180,11 @@ export function Footer() {
           </ul>
 
           <div className="mt-2 flex flex-col gap-2">
-            <p className="text-xs text-mist-100/60">
+            <p className="text-xs text-white/60">
               Newsletter for updates and offers.
             </p>
             {subscribed ? (
-              <p className="flex items-center gap-1.5 text-sm font-medium text-gold-300">
+              <p className="flex items-center gap-1.5 text-sm font-medium text-gold-light">
                 <svg
                   width="14"
                   height="14"
@@ -216,7 +213,7 @@ export function Footer() {
                   value={newsletterEmail}
                   onChange={(e) => setNewsletterEmail(e.target.value)}
                   placeholder="Your email"
-                  className="glass-panel-dark w-full rounded-(--radius-full) px-4 py-2 text-sm text-white placeholder:text-mist-100/40 focus:outline-none focus:ring-2 focus:ring-gold-400"
+                  className="w-full rounded-(--radius-full) border border-white/20 bg-white/5 px-4 py-2 text-sm text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-gold"
                 />
                 <Button type="submit" variant="gold" size="sm">
                   Subscribe
@@ -229,11 +226,11 @@ export function Footer() {
 
       <div className="relative z-10 border-t border-white/10 py-6">
         <Container className="flex flex-col items-center justify-between gap-4 text-center sm:flex-row sm:text-left">
-          <p className="text-xs text-mist-100/50">
+          <p className="text-xs text-white/50">
             Registered International Training Provider, Est. 2020 ·{" "}
-            <span className="text-gold-300">TIA-TR-YKSB-2020-1042</span>
+            <span className="text-gold-light">TIA-TR-YKSB-2020-1042</span>
           </p>
-          <p className="text-xs text-mist-100/50">
+          <p className="text-xs text-white/50">
             © 2026 Turkish International Academy. All rights reserved.
           </p>
           <nav
@@ -242,13 +239,13 @@ export function Footer() {
           >
             <Link
               href="/privacy-policy"
-              className="text-xs font-semibold text-mist-100/80 underline decoration-gold-400/40 underline-offset-4 transition-colors hover:text-gold-300 hover:decoration-gold-300"
+              className="text-xs font-semibold text-white/80 underline decoration-gold/40 underline-offset-4 hover:text-gold-light hover:decoration-gold-light"
             >
               Privacy Policy
             </Link>
             <Link
               href="/terms"
-              className="text-xs font-semibold text-mist-100/80 underline decoration-gold-400/40 underline-offset-4 transition-colors hover:text-gold-300 hover:decoration-gold-300"
+              className="text-xs font-semibold text-white/80 underline decoration-gold/40 underline-offset-4 hover:text-gold-light hover:decoration-gold-light"
             >
               Terms &amp; Conditions
             </Link>

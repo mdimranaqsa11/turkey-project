@@ -22,15 +22,15 @@ function SelectField({ label, error, children, ...props }) {
   const id = useId();
   return (
     <div className="flex flex-col gap-1.5">
-      <label htmlFor={id} className="text-sm font-medium text-mist-100">
+      <label htmlFor={id} className="text-sm font-medium text-text">
         {label}
       </label>
       <select
         id={id}
         aria-invalid={Boolean(error)}
         className={cn(
-          "w-full rounded-(--radius-sm) glass-panel px-4 py-2.5 text-sm text-mist-50 focus:outline-none focus:ring-2 transition-shadow",
-          error ? "ring-2 ring-red-400/60" : "focus:ring-gold-400"
+          "w-full rounded-(--radius-sm) border border-border bg-white px-4 py-2.5 text-sm text-navy focus:outline-none focus:ring-2",
+          error ? "ring-2 ring-red-400/60" : "focus:ring-gold"
         )}
         {...props}
       >
@@ -131,11 +131,11 @@ export function RegisterForm() {
         onChange={update("qualification")}
         error={errors.qualification}
       >
-        <option value="" className="bg-ink-900">
+        <option value="" className="bg-white">
           Select your qualification
         </option>
         {qualifications.map((q) => (
-          <option key={q} value={q} className="bg-ink-900">
+          <option key={q} value={q} className="bg-white">
             {q}
           </option>
         ))}
@@ -176,19 +176,19 @@ export function RegisterForm() {
       />
 
       <div className="flex flex-col gap-1.5">
-        <label className="flex items-start gap-2.5 text-sm text-mist-200/80">
+        <label className="flex items-start gap-2.5 text-sm text-muted">
           <input
             type="checkbox"
             checked={values.agree}
             onChange={update("agree")}
-            className="mt-0.5 h-4 w-4 shrink-0 rounded border-white/20 bg-transparent accent-gold-400"
+            className="mt-0.5 h-4 w-4 shrink-0 rounded border-border bg-transparent accent-gold"
           />
           I agree to the{" "}
-          <Link href="/terms" className="font-semibold text-gold-300 hover:text-gold-200">
+          <Link href="/terms" className="font-semibold text-gold-dark hover:text-navy">
             Terms and Conditions
           </Link>{" "}
           and{" "}
-          <Link href="/privacy-policy" className="font-semibold text-gold-300 hover:text-gold-200">
+          <Link href="/privacy-policy" className="font-semibold text-gold-dark hover:text-navy">
             Privacy Policy
           </Link>
         </label>
@@ -201,9 +201,9 @@ export function RegisterForm() {
         Create Account
       </Button>
 
-      <p className="text-center text-sm text-mist-200/70">
+      <p className="text-center text-sm text-muted">
         Already have an account?{" "}
-        <Link href="/login" className="font-semibold text-gold-300 hover:text-gold-200">
+        <Link href="/login" className="font-semibold text-gold-dark hover:text-navy">
           Sign In
         </Link>
       </p>

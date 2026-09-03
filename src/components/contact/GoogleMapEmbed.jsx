@@ -11,7 +11,7 @@ export function GoogleMapEmbed() {
         href={mapsUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className="glass-panel-dark absolute left-4 top-4 z-10 flex items-center gap-1.5 rounded-(--radius-full) px-3 py-1.5 text-xs font-semibold text-mist-50 transition-colors hover:text-gold-300"
+        className="absolute left-4 top-4 z-10 flex items-center gap-1.5 rounded-(--radius-full) border border-border bg-white px-3 py-1.5 text-xs font-semibold text-navy hover:text-gold-dark"
       >
         Open in Maps
         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">

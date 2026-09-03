@@ -15,13 +15,13 @@ export function FeatureStrip() {
         <StaggerGroup className="grid grid-cols-2 gap-4 sm:grid-cols-4">
           {features.map((feature) => (
             <StaggerItem key={feature}>
-              <div className="glass-panel flex items-center gap-3 rounded-(--radius-md) px-5 py-4">
-                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-gold-300 to-gold-500 text-ink-950">
+              <div className="flex items-center gap-3 rounded-(--radius-md) border border-border bg-white px-5 py-4">
+                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-gold text-navy-deep">
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M20 6 9 17l-5-5" />
                   </svg>
                 </span>
-                <span className="text-sm font-semibold text-mist-100">{feature}</span>
+                <span className="text-sm font-semibold text-text">{feature}</span>
               </div>
             </StaggerItem>
           ))}

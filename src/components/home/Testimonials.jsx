@@ -1,11 +1,7 @@
-"use client";
-
-import { useEffect, useState } from "react";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { GlassCard } from "@/components/ui/GlassCard";
 import { Button } from "@/components/ui/Button";
-import { cn } from "@/lib/utils";
 
 const testimonials = [
   {
@@ -48,7 +44,7 @@ const testimonials = [
 
 function Stars() {
   return (
-    <div className="flex items-center gap-1 text-gold-500">
+    <div className="flex items-center gap-1 text-gold">
       {Array.from({ length: 5 }).map((_, i) => (
         <svg key={i} width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
           <path d="M12 2.5l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.8l-6.1 3.3 1.4-6.8-5.1-4.7 6.9-.8L12 2.5z" />
@@ -59,17 +55,6 @@ function Stars() {
 }
 
 export function Testimonials() {
-  const [index, setIndex] = useState(0);
-
-  useEffect(() => {
-    const id = setInterval(() => {
-      setIndex((i) => (i + 1) % testimonials.length);
-    }, 7000);
-    return () => clearInterval(id);
-  }, []);
-
-  const t = testimonials[index];
-
   return (
     <section className="py-24 sm:py-32">
       <Container className="flex flex-col items-center gap-12">
@@ -79,62 +64,29 @@ export function Testimonials() {
           description="Discover how TIAMA certification, accreditation and training has transformed practices, elevated institutions, and established global recognition for medical & aesthetic professionals also academies across continents."
         />
 
-        <div className="relative w-full max-w-3xl">
-          <div>
-            <GlassCard variant="strong" className="flex flex-col items-center gap-6 px-6 py-10 text-center sm:px-14">
-              <span className="font-display text-6xl leading-none text-gold-400/60">&ldquo;</span>
+        <div className="grid w-full grid-cols-1 gap-6 md:grid-cols-2">
+          {testimonials.map((t) => (
+            <GlassCard
+              key={t.name}
+              variant="strong"
+              className="flex flex-col gap-5 p-6 sm:p-8"
+            >
               <Stars />
-              <p className="text-base leading-relaxed text-mist-100/90 sm:text-lg">
+              <p className="text-sm leading-relaxed text-text sm:text-base">
                 {t.quote}
               </p>
-              <div className="flex items-center gap-3">
-                <span className="flex h-11 w-11 items-center justify-center rounded-full bg-gradient-to-br from-royal-500 to-gold-400 font-display text-lg font-bold text-ink-950">
+              <div className="mt-auto flex items-center gap-3 border-t border-border pt-5">
+                <span className="flex h-11 w-11 items-center justify-center rounded-full bg-navy font-display text-lg font-bold text-white">
                   {t.initial}
                 </span>
                 <div className="text-left">
-                  <p className="text-sm font-bold uppercase tracking-wide text-mist-50">
+                  <p className="text-sm font-bold uppercase tracking-wide text-navy">
                     {t.name}
                   </p>
-                  <p className="text-xs font-medium text-gold-300">TIAMA Certified</p>
+                  <p className="text-xs font-medium text-gold-dark">TIAMA Certified</p>
                 </div>
               </div>
             </GlassCard>
-          </div>
-
-          <button
-            type="button"
-            aria-label="Previous testimonial"
-            onClick={() => setIndex((i) => (i - 1 + testimonials.length) % testimonials.length)}
-            className="glass-panel absolute left-0 top-1/2 hidden h-11 w-11 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full text-mist-100 transition-transform duration-300 hover:scale-110 sm:flex"
-          >
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-              <path d="m15 18-6-6 6-6" />
-            </svg>
-          </button>
-          <button
-            type="button"
-            aria-label="Next testimonial"
-            onClick={() => setIndex((i) => (i + 1) % testimonials.length)}
-            className="glass-panel absolute right-0 top-1/2 hidden h-11 w-11 -translate-y-1/2 translate-x-1/2 items-center justify-center rounded-full text-mist-100 transition-transform duration-300 hover:scale-110 sm:flex"
-          >
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-              <path d="m9 18 6-6-6-6" />
-            </svg>
-          </button>
-        </div>
-
-        <div className="flex items-center gap-2">
-          {testimonials.map((_, i) => (
-            <button
-              key={i}
-              type="button"
-              aria-label={`Go to testimonial ${i + 1}`}
-              onClick={() => setIndex(i)}
-              className={cn(
-                "h-1.5 rounded-full transition-all duration-400 ease-(--ease-premium)",
-                i === index ? "w-8 bg-gold-400" : "w-1.5 bg-white/15 hover:bg-white/30"
-              )}
-            />
           ))}
         </div>
 

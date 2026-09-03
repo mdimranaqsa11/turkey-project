@@ -84,7 +84,7 @@ export function LoginForm() {
         />
         <Link
           href="/forgot-password"
-          className="self-end text-xs font-semibold text-gold-300 hover:text-gold-200"
+          className="self-end text-xs font-semibold text-gold-dark hover:text-navy"
         >
           Forgot Password?
         </Link>
@@ -94,9 +94,9 @@ export function LoginForm() {
         Sign In
       </Button>
 
-      <p className="text-center text-sm text-mist-200/70">
+      <p className="text-center text-sm text-muted">
         Don&apos;t have an account?{" "}
-        <Link href="/register" className="font-semibold text-gold-300 hover:text-gold-200">
+        <Link href="/register" className="font-semibold text-gold-dark hover:text-navy">
           Sign Up
         </Link>
       </p>

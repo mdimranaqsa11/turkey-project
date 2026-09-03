@@ -18,12 +18,12 @@ export function FormField({
 
   return (
     <div className={cn("flex flex-col gap-1.5", className)}>
-      <label htmlFor={id} className="text-sm font-medium text-mist-100">
+      <label htmlFor={id} className="text-sm font-medium text-text">
         {label}
       </label>
       <div className="relative">
         {icon ? (
-          <span className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 text-mist-200/50">
+          <span className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 text-muted">
             {icon}
           </span>
         ) : null}
@@ -33,10 +33,10 @@ export function FormField({
           aria-invalid={Boolean(error)}
           aria-describedby={error ? `${id}-error` : undefined}
           className={cn(
-            "w-full rounded-(--radius-sm) glass-panel py-2.5 text-sm text-mist-50 placeholder:text-mist-200/40 focus:outline-none focus:ring-2 transition-shadow",
+            "w-full rounded-(--radius-sm) border border-border bg-white py-2.5 text-sm text-text placeholder:text-muted/60 focus:outline-none focus:ring-2",
             icon ? "pl-10 pr-4" : "px-4",
             isPassword && "pr-11",
-            error ? "ring-2 ring-red-400/60" : "focus:ring-gold-400"
+            error ? "ring-2 ring-red-400/60" : "focus:ring-gold"
           )}
           {...props}
         />
@@ -45,7 +45,7 @@ export function FormField({
             type="button"
             onClick={() => setShowPassword((v) => !v)}
             aria-label={showPassword ? "Hide password" : "Show password"}
-            className="absolute right-3.5 top-1/2 -translate-y-1/2 text-mist-200/50 hover:text-mist-100"
+            className="absolute right-3.5 top-1/2 -translate-y-1/2 text-muted hover:text-text"
           >
             {showPassword ? (
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

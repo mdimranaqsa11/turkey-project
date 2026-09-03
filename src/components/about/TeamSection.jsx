@@ -69,7 +69,7 @@ export function TeamSection() {
             title={
               <>
                 Meet the Head{" "}
-                <span className="text-gradient-gold">of TIAMA</span>
+                <span className="text-gold-dark">of TIAMA</span>
               </>
             }
           />
@@ -88,7 +88,7 @@ export function TeamSection() {
             title={
               <>
                 Meet the Expert{" "}
-                <span className="text-gradient-gold">Team of TIAMA</span>
+                <span className="text-gold-dark">Team of TIAMA</span>
               </>
             }
           />

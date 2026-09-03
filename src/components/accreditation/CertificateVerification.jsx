@@ -7,10 +7,10 @@ export function CertificateVerification() {
     <section className="py-24 sm:py-28">
       <Container className="flex flex-col gap-10">
         <Reveal className="flex flex-col gap-4">
-          <h2 className="font-display text-2xl font-semibold tracking-tight text-mist-50 sm:text-3xl">
+          <h2 className="font-display text-2xl font-semibold tracking-tight text-navy sm:text-3xl">
             Certificate Verification
           </h2>
-          <p className="max-w-3xl text-base leading-relaxed text-mist-200/80 sm:text-lg">
+          <p className="max-w-3xl text-base leading-relaxed text-muted sm:text-lg">
             Every certificate issued by an accredited institution contains a
             unique Accreditation ID / QR code. Students and organizations
             can verify authenticity instantly through our online
@@ -32,14 +32,14 @@ export function CertificateVerification() {
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
-              className="mt-0.5 shrink-0 text-gold-300"
+              className="mt-0.5 shrink-0 text-gold-dark"
             >
               <path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0Z" />
               <path d="M12 9v4" />
               <path d="M12 17h.01" />
             </svg>
-            <p className="text-sm leading-relaxed text-mist-200/85">
-              <span className="font-semibold text-mist-50">Disclaimer: </span>
+            <p className="text-sm leading-relaxed text-muted">
+              <span className="font-semibold text-navy">Disclaimer: </span>
               TIAMA accreditation is a private professional certification
               for institutional training quality. It does not grant or
               replace any government medical license, specialization

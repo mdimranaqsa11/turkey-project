@@ -18,10 +18,10 @@ export function AboutStats() {
           {stats.map((stat) => (
             <StaggerItem key={stat.label}>
               <GlassCard variant="strong" className="flex flex-col items-center gap-1 rounded-(--radius-lg) px-4 py-8 text-center">
-                <span className="font-display text-3xl font-bold text-gold-300 sm:text-4xl">
+                <span className="font-display text-3xl font-bold text-gold-dark sm:text-4xl">
                   <Counter value={stat.value} suffix={stat.suffix} />
                 </span>
-                <span className="text-xs font-medium text-mist-200/70 sm:text-sm">
+                <span className="text-xs font-medium text-muted sm:text-sm">
                   {stat.label}
                 </span>
               </GlassCard>

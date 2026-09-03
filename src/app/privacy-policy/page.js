@@ -14,7 +14,7 @@ const sections = [
     title: "1. About TIAMA",
     body: (
       <p>
-        <strong className="text-white">
+        <strong className="text-navy">
           Turkey International Academy of Medical Science &amp; Aesthetics
           (TIAMA)
         </strong>{" "}
@@ -111,29 +111,29 @@ export default function PrivacyPolicyPage() {
           >
             {sections.map((section, index) => (
               <div key={section.title} className="flex flex-col gap-3">
-                <h2 className="font-display text-xl font-semibold text-white sm:text-2xl">
+                <h2 className="font-display text-xl font-semibold text-navy sm:text-2xl">
                   {section.title}
                 </h2>
-                <div className="flex flex-col gap-3 text-sm leading-relaxed text-mist-100/75 sm:text-base [&_ul]:flex [&_ul]:flex-col [&_ul]:gap-2 [&_ul]:pl-5 [&_li]:list-disc">
+                <div className="flex flex-col gap-3 text-sm leading-relaxed text-muted sm:text-base [&_ul]:flex [&_ul]:flex-col [&_ul]:gap-2 [&_ul]:pl-5 [&_li]:list-disc">
                   {section.body}
                 </div>
 
                 {index === 5 ? (
-                  <div className="mt-4 rounded-(--radius-md) border-l-4 border-gold-400 bg-gold-400/10 p-6">
-                    <h3 className="font-display text-lg font-semibold text-gold-300">
+                  <div className="mt-4 rounded-(--radius-md) border-l-4 border-gold bg-gold/10 p-6">
+                    <h3 className="font-display text-lg font-semibold text-gold-dark">
                       Important Certification Disclaimer
                     </h3>
-                    <p className="mt-3 text-sm leading-relaxed text-mist-100/80 sm:text-base">
+                    <p className="mt-3 text-sm leading-relaxed text-muted sm:text-base">
                       TIAMA certifications are issued for professional
                       development and educational purposes only. They are{" "}
-                      <strong className="text-white">
+                      <strong className="text-navy">
                         not equivalent to government-recognized medical
                         degrees
                       </strong>{" "}
                       and do not grant a license or legal authority to
                       practice medicine or aesthetics in any country.
                     </p>
-                    <p className="mt-2 text-sm leading-relaxed text-mist-100/80 sm:text-base">
+                    <p className="mt-2 text-sm leading-relaxed text-muted sm:text-base">
                       Medical practice requires valid licensing from the
                       appropriate local or national regulatory authority.
                     </p>

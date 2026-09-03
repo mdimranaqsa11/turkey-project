@@ -13,13 +13,10 @@ export function FutureSection() {
   const [openIndex, setOpenIndex] = useState(0);
 
   return (
-    <section className="relative overflow-hidden py-24 sm:py-32">
-      <div className="pointer-events-none absolute -left-32 top-1/3 h-96 w-96 rounded-full bg-royal-500/20 blur-3xl" />
-
+    <section className="py-24 sm:py-32">
       <Container className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
         <Reveal direction="right">
           <div className="relative mx-auto max-w-sm">
-            <div className="pointer-events-none absolute -inset-6 -z-10 rounded-(--radius-xl) bg-gradient-to-tr from-gold-400/25 to-royal-400/20 blur-2xl" />
             <GlassCard variant="strong" className="p-3">
               <div className="relative aspect-[3/4] w-full overflow-hidden rounded-(--radius-md)">
                 <Image
@@ -35,25 +32,25 @@ export function FutureSection() {
         </Reveal>
 
         <Reveal direction="left" delay={0.1} className="flex flex-col gap-6">
-          <h2 className="font-display text-3xl font-semibold tracking-tight text-mist-50 sm:text-4xl">
+          <h2 className="font-display text-3xl font-semibold tracking-tight text-navy sm:text-4xl">
             We&apos;re shaping the future of{" "}
-            <span className="text-gradient-gold">Medical Science</span>
+            <span className="text-gold-dark">Medical Science</span>
           </h2>
 
           <GlassCard variant="light" className="flex items-center gap-4 p-4">
-            <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-(--radius-sm) border border-royal-300/40 bg-royal-400/15 text-royal-300">
+            <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-(--radius-sm) border border-blue/40 bg-blue-soft text-blue">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <circle cx="12" cy="12" r="10" />
                 <path d="M2 12h20M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20Z" />
               </svg>
             </span>
             <div>
-              <p className="text-sm font-semibold text-mist-50">Global Recognition</p>
-              <p className="text-xs text-mist-200/60">50+ Countries</p>
+              <p className="text-sm font-semibold text-navy">Global Recognition</p>
+              <p className="text-xs text-muted">50+ Countries</p>
             </div>
           </GlassCard>
 
-          <p className="text-base leading-relaxed text-mist-200/80">
+          <p className="text-base leading-relaxed text-muted">
             The Turkish International Academy of The Medical Science &amp;
             Aesthetics (TIAMA) Certification is a globally recognized
             authority dedicated to upholding the highest standards of
@@ -61,13 +58,13 @@ export function FutureSection() {
             education &amp; practice.
           </p>
 
-          <div className="flex flex-col divide-y divide-white/10 overflow-hidden rounded-(--radius-md) glass-panel">
+          <div className="flex flex-col divide-y divide-border overflow-hidden rounded-(--radius-md) border border-border bg-white">
             {items.map((item, i) => (
               <button
                 key={item}
                 type="button"
                 onClick={() => setOpenIndex(i === openIndex ? -1 : i)}
-                className="flex items-center justify-between px-5 py-4 text-left text-sm font-semibold text-mist-100 transition-colors hover:bg-white/5"
+                className="flex items-center justify-between px-5 py-4 text-left text-sm font-semibold text-text hover:bg-ivory"
               >
                 {item}
                 <svg
@@ -80,8 +77,8 @@ export function FutureSection() {
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   className={cn(
-                    "shrink-0 text-gold-300 transition-transform duration-300 ease-(--ease-premium)",
-                    openIndex === i && "rotate-180"
+                    "shrink-0 text-gold-dark",
+                    openIndex === i ? "rotate-180" : ""
                   )}
                 >
                   <path d="m6 9 6 6 6-6" />

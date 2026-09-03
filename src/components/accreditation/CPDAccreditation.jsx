@@ -14,21 +14,19 @@ const cpdBenefits = [
 
 export function CPDAccreditation() {
   return (
-    <section className="relative overflow-hidden py-24 sm:py-28">
-      <div className="pointer-events-none absolute -right-24 top-0 h-96 w-96 rounded-full bg-royal-500/20 blur-3xl" />
-
+    <section className="py-24 sm:py-28">
       <Container className="flex flex-col gap-12">
         <Reveal>
           <GlassCard variant="strong" className="flex flex-col gap-6 rounded-(--radius-lg) p-8 sm:p-10">
             <div className="flex flex-wrap items-center gap-4">
-              <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-(--radius-sm) bg-gradient-to-br from-gold-300 to-gold-500 font-display text-sm font-extrabold text-ink-950">
+              <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-(--radius-sm) bg-gold font-display text-sm font-extrabold text-navy-deep">
                 CPD
               </span>
-              <h2 className="font-display text-2xl font-semibold tracking-tight text-mist-50 sm:text-3xl">
+              <h2 className="font-display text-2xl font-semibold tracking-tight text-navy sm:text-3xl">
                 CPD Accreditation
               </h2>
             </div>
-            <p className="text-base leading-relaxed text-mist-200/80 sm:text-lg">
+            <p className="text-base leading-relaxed text-muted sm:text-lg">
               TIAMA is proud to offer CPD (Continuing Professional
               Development) Accreditation for courses and training programs
               that meet rigorous standards for Ongoing Professional Holistic
@@ -40,17 +38,17 @@ export function CPDAccreditation() {
         </Reveal>
 
         <Reveal className="flex flex-col gap-4">
-          <h3 className="font-display text-xl font-bold text-mist-50">
+          <h3 className="font-display text-xl font-bold text-navy">
             What is CPD Accreditation?
           </h3>
-          <p className="text-base leading-relaxed text-mist-200/80">
+          <p className="text-base leading-relaxed text-muted">
             CPD Accreditation recognizes courses that contribute to the
             continuous learning and skill enhancement of healthcare and
             aesthetic professionals. These programs help practitioners stay
             current with evolving techniques, technologies, and industry
             best practices.
           </p>
-          <p className="text-base leading-relaxed text-mist-200/80">
+          <p className="text-base leading-relaxed text-muted">
             CPD-accredited courses are assigned CPD points/hours based on
             course duration, complexity, and learning outcomes, which
             professionals can use to demonstrate their commitment to
@@ -60,7 +58,7 @@ export function CPDAccreditation() {
 
         <div className="flex flex-col gap-4">
           <Reveal>
-            <h3 className="font-display text-xl font-bold text-mist-50">
+            <h3 className="font-display text-xl font-bold text-navy">
               Benefits of CPD Accreditation
             </h3>
           </Reveal>

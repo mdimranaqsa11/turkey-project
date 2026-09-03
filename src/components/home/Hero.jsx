@@ -36,7 +36,7 @@ export function Hero() {
   const slide = slides[index];
 
   return (
-    <section className="relative isolate flex min-h-[100dvh] items-center overflow-hidden bg-mesh-hero px-6 pb-20 pt-28 sm:px-8 sm:pt-32">
+    <section className="relative flex items-center overflow-hidden bg-navy-deep px-6 py-20 sm:px-8 sm:py-28">
       <div className="absolute inset-0 -z-10">
         <Image
           src="/images/home/hero-seminar.jpeg"
@@ -46,31 +46,27 @@ export function Hero() {
           className="object-cover object-center"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-ink-950 via-ink-950/85 to-ink-950/55" />
-        <div className="absolute inset-0 bg-gradient-to-t from-ink-950 via-ink-950/20 to-transparent" />
+        <div className="absolute inset-0 bg-navy-deep/80" />
       </div>
-
-      <div className="pointer-events-none absolute left-1/4 top-1/4 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-royal-600/40 blur-[120px]" />
-      <div className="pointer-events-none absolute bottom-1/4 right-1/4 h-[500px] w-[500px] translate-x-1/2 translate-y-1/2 rounded-full bg-gold-500/20 blur-[100px]" />
 
       <Container className="relative z-10 grid grid-cols-1 items-center gap-12 lg:grid-cols-12 lg:gap-8">
         <div className="relative z-20 flex flex-col gap-6 lg:col-span-7">
-            <span className="glass-panel-dark inline-flex w-fit items-center gap-2 rounded-(--radius-full) px-4 py-1.5 text-xs font-bold uppercase tracking-[0.14em] text-gold-300">
+            <span className="inline-flex w-fit items-center gap-2 rounded-(--radius-full) border border-white/20 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.14em] text-gold-light">
               {slide.eyebrow}
             </span>
 
-            <h1 className="font-display text-4xl font-extrabold leading-[1.05] tracking-tight text-mist-50 sm:text-5xl lg:text-6xl">
+            <h1 className="font-display text-4xl font-extrabold leading-[1.05] tracking-tight text-white sm:text-5xl lg:text-6xl">
               {slide.title}
               <br />
-              <span className="text-gradient-gold">{slide.highlight}</span>
+              <span className="text-gold-light">{slide.highlight}</span>
             </h1>
 
-            <p className="max-w-xl text-base leading-relaxed text-mist-200/80 sm:text-lg">
+            <p className="max-w-xl text-base leading-relaxed text-white/80 sm:text-lg">
               {slide.body}
             </p>
 
-            <div className="glass-panel-dark inline-flex w-fit items-center gap-2 rounded-(--radius-full) px-4 py-2 text-xs font-medium text-mist-100/90">
-              <span className="h-1.5 w-1.5 rounded-full bg-gold-400" />
+            <div className="inline-flex w-fit items-center gap-2 rounded-(--radius-full) border border-white/20 px-4 py-2 text-xs font-medium text-white/90">
+              <span className="h-1.5 w-1.5 rounded-full bg-gold" />
               {slide.badge}
             </div>
 
@@ -86,14 +82,14 @@ export function Hero() {
               </Button>
             </div>
 
-            <p className="mt-2 text-xs font-medium tracking-wide text-mist-200/50">
+            <p className="mt-2 text-xs font-medium tracking-wide text-white/50">
               Global Internal Qualification Registration ID ·{" "}
-              <span className="text-gold-300">TIA-TR-YKSB-2020-1042</span>
+              <span className="text-gold-light">TIA-TR-YKSB-2020-1042</span>
             </p>
         </div>
 
         <div className="relative hidden h-[600px] lg:col-span-5 lg:block">
-          <div className="absolute inset-0 overflow-hidden rounded-(--radius-lg) border border-white/10 opacity-80">
+          <div className="absolute inset-0 overflow-hidden rounded-(--radius-lg) border border-white/10">
             <Image
               src="/images/home/hero-seminar.jpeg"
               alt="Medical and aesthetics professionals at a TIAMA seminar"
@@ -101,38 +97,37 @@ export function Hero() {
               className="object-cover object-center"
               sizes="40vw"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-ink-950 via-transparent to-transparent" />
           </div>
 
-          <div className="glass-panel-strong absolute -left-8 top-10 flex w-72 -rotate-3 items-center gap-4 rounded-(--radius-md) p-6 transition-transform duration-500 hover:rotate-0">
-            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-gold-400 bg-gold-400/10">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-gold-300">
+          <div className="absolute -left-8 top-10 flex w-72 items-center gap-4 rounded-(--radius-md) border border-border bg-white p-6 shadow-(--shadow-md)">
+            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-gold bg-gold/10">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-gold-dark">
                 <path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526" />
                 <circle cx="12" cy="8" r="6" />
               </svg>
             </div>
             <div>
-              <div className="text-xs font-bold uppercase tracking-[0.1em] text-gold-300">
+              <div className="text-xs font-bold uppercase tracking-[0.1em] text-gold-dark">
                 Accredited
               </div>
-              <div className="font-display text-sm font-bold text-mist-50">
+              <div className="font-display text-sm font-bold text-navy">
                 TIAMA Certification
               </div>
             </div>
           </div>
 
-          <div className="glass-panel-strong absolute -right-8 bottom-16 flex w-64 rotate-6 items-center gap-4 rounded-(--radius-md) p-6 transition-transform duration-500 hover:rotate-0">
-            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-royal-300 bg-royal-300/10">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-royal-300">
+          <div className="absolute -right-8 bottom-16 flex w-64 items-center gap-4 rounded-(--radius-md) border border-border bg-white p-6 shadow-(--shadow-md)">
+            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-blue bg-blue-soft">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-blue">
                 <circle cx="12" cy="12" r="10" />
                 <path d="M2 12h20M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20Z" />
               </svg>
             </div>
             <div>
-              <div className="text-xs font-bold uppercase tracking-[0.1em] text-royal-300">
+              <div className="text-xs font-bold uppercase tracking-[0.1em] text-blue">
                 Global Network
               </div>
-              <div className="font-display text-sm font-bold text-mist-50">50+ Countries</div>
+              <div className="font-display text-sm font-bold text-navy">50+ Countries</div>
             </div>
           </div>
         </div>
@@ -146,8 +141,8 @@ export function Hero() {
             aria-label={`Go to slide ${i + 1}`}
             onClick={() => setIndex(i)}
             className={cn(
-              "h-1.5 rounded-full transition-all duration-400 ease-(--ease-premium)",
-              i === index ? "w-8 bg-gold-400" : "w-1.5 bg-white/30 hover:bg-white/50"
+              "h-1.5 rounded-full",
+              i === index ? "w-8 bg-gold" : "w-1.5 bg-white/30 hover:bg-white/50"
             )}
           />
         ))}

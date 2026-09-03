@@ -72,10 +72,7 @@ export function CourseCategories() {
             <StaggerItem key={cat.title} className={cn(cat.span && "sm:col-span-2")}>
               <GlassCard
                 variant="strong"
-                className={cn(
-                  "group flex h-full flex-col overflow-hidden transition-transform duration-500 ease-(--ease-premium) hover:-translate-y-1.5",
-                  cat.span && "sm:flex-row"
-                )}
+                className={cn("flex h-full flex-col overflow-hidden", cat.span && "sm:flex-row")}
               >
                 <div
                   className={cn(
@@ -87,29 +84,29 @@ export function CourseCategories() {
                     src={cat.image}
                     alt={cat.title}
                     fill
-                    className="object-cover transition-transform duration-700 ease-(--ease-premium) group-hover:scale-105"
+                    className="object-cover"
                     sizes="(min-width: 640px) 45vw, 100vw"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-ink-950/70 via-ink-950/10 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-navy-deep/70 via-navy-deep/10 to-transparent" />
                   {cat.badge ? (
-                    <span className="absolute left-4 top-4 rounded-(--radius-full) bg-gradient-to-r from-gold-500 to-gold-400 px-3 py-1 text-xs font-bold text-ink-950">
+                    <span className="absolute left-4 top-4 rounded-(--radius-full) bg-gold px-3 py-1 text-xs font-bold text-navy-deep">
                       {cat.badge}
                     </span>
                   ) : null}
-                  <span className="absolute bottom-4 left-4 rounded-(--radius-full) glass-panel-dark px-3 py-1 text-xs font-semibold text-white">
+                  <span className="absolute bottom-4 left-4 rounded-(--radius-full) bg-navy-deep px-3 py-1 text-xs font-semibold text-white">
                     {cat.count}
                   </span>
                 </div>
 
                 <div className="flex flex-1 flex-col gap-4 p-6">
-                  <h3 className="font-display text-xl font-semibold tracking-tight text-mist-50">
+                  <h3 className="font-display text-xl font-semibold tracking-tight text-navy">
                     {cat.title}
                   </h3>
-                  <p className="flex-1 text-sm leading-relaxed text-mist-200/80">
+                  <p className="flex-1 text-sm leading-relaxed text-muted">
                     {cat.description}
                   </p>
 
-                  <div className="flex items-center gap-2 text-xs font-medium text-royal-300">
+                  <div className="flex items-center gap-2 text-xs font-medium text-blue">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                       <circle cx="12" cy="12" r="10" />
                       <path d="M12 6v6l4 2" />
@@ -117,23 +114,23 @@ export function CourseCategories() {
                     {cat.duration}
                   </div>
 
-                  <div className="flex flex-wrap items-center justify-between gap-4 border-t border-white/10 pt-4">
+                  <div className="flex flex-wrap items-center justify-between gap-4 border-t border-border pt-4">
                     {cat.contactOnly ? (
                       <div>
-                        <p className="text-xs font-medium uppercase tracking-wide text-mist-200/50">
+                        <p className="text-xs font-medium uppercase tracking-wide text-muted">
                           Course Fee
                         </p>
-                        <p className="font-display text-lg font-bold text-mist-50">
+                        <p className="font-display text-lg font-bold text-navy">
                           Contact for details
                         </p>
                       </div>
                     ) : (
                       <div>
-                        <p className="text-xs font-medium uppercase tracking-wide text-mist-200/50">
+                        <p className="text-xs font-medium uppercase tracking-wide text-muted">
                           Regular Price{" "}
-                          <span className="ml-1 text-mist-200/40 line-through">{cat.regular}</span>
+                          <span className="ml-1 text-muted/70 line-through">{cat.regular}</span>
                         </p>
-                        <p className="font-display text-2xl font-bold text-mist-50">
+                        <p className="font-display text-2xl font-bold text-navy">
                           {cat.special}
                         </p>
                       </div>

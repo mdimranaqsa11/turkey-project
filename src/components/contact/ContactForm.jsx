@@ -20,7 +20,7 @@ const MIN_MESSAGE = 20;
 const MAX_MESSAGE = 2000;
 
 const inputClass =
-  "w-full rounded-(--radius-sm) glass-panel px-4 py-2.5 text-sm text-mist-50 placeholder:text-mist-200/40 focus:outline-none focus:ring-2 transition-shadow";
+  "w-full rounded-(--radius-sm) border border-border bg-white px-4 py-2.5 text-sm text-text placeholder:text-muted/60 focus:outline-none focus:ring-2";
 
 const initialValues = {
   fullName: "",
@@ -66,7 +66,7 @@ export function ContactForm() {
       variant="strong"
       className="flex flex-col gap-6 rounded-(--radius-lg) p-6 sm:p-8"
     >
-      <h2 className="font-display text-xl font-bold text-mist-50">
+      <h2 className="font-display text-xl font-bold text-navy">
         Send Us a Message
       </h2>
 
@@ -122,7 +122,7 @@ export function ContactForm() {
             <div className="flex flex-col gap-1.5">
               <label
                 htmlFor={inquiryId}
-                className="text-sm font-medium text-mist-100"
+                className="text-sm font-medium text-text"
               >
                 Type of Inquiry *
               </label>
@@ -135,17 +135,17 @@ export function ContactForm() {
                   inputClass,
                   errors.inquiryType
                     ? "ring-2 ring-red-400/60"
-                    : "focus:ring-gold-400",
+                    : "focus:ring-gold",
                 )}
               >
-                <option value="" disabled className="bg-ink-900">
+                <option value="" disabled className="bg-white">
                   Select an inquiry type
                 </option>
                 {inquiryTypes.map((type) => (
                   <option
                     key={type}
                     value={type}
-                    className="bg-ink-900 text-mist-50"
+                    className="bg-white text-navy"
                   >
                     {type}
                   </option>
@@ -161,7 +161,7 @@ export function ContactForm() {
             <div className="flex flex-col gap-1.5">
               <label
                 htmlFor={`${inquiryId}-message`}
-                className="text-sm font-medium text-mist-100"
+                className="text-sm font-medium text-text"
               >
                 Your Message *
               </label>
@@ -182,11 +182,11 @@ export function ContactForm() {
                   "resize-none",
                   errors.message
                     ? "ring-2 ring-red-400/60"
-                    : "focus:ring-gold-400",
+                    : "focus:ring-gold",
                 )}
               />
               <div className="flex items-center justify-between">
-                <span className="text-xs text-mist-200/50">
+                <span className="text-xs text-muted">
                   {values.message.length}/{MAX_MESSAGE} characters (minimum{" "}
                   {MIN_MESSAGE})
                 </span>
@@ -220,7 +220,7 @@ export function ContactForm() {
               </svg>
             </Button>
 
-            <p className="flex items-center justify-center gap-1.5 text-xs text-mist-200/50">
+            <p className="flex items-center justify-center gap-1.5 text-xs text-muted">
               <svg
                 width="14"
                 height="14"

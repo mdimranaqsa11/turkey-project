@@ -40,7 +40,7 @@ const items = [
 export function ContactInfo() {
   return (
     <GlassCard variant="strong" className="flex flex-col gap-6 rounded-(--radius-lg) p-6 sm:p-8">
-      <h2 className="font-display text-xl font-bold text-mist-50">
+      <h2 className="font-display text-xl font-bold text-navy">
         Contact Information
       </h2>
       <div className="flex flex-col gap-5">
@@ -50,19 +50,19 @@ export function ContactInfo() {
             <Tag
               key={item.label}
               href={item.href}
-              className="flex items-start gap-4 group"
+              className="group flex items-start gap-4"
             >
-              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-(--radius-sm) bg-gradient-to-br from-gold-300 to-gold-500 text-ink-950">
+              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-(--radius-sm) bg-gold text-navy-deep">
                 {item.icon}
               </span>
-              <div>
-                <p className="text-xs font-semibold uppercase tracking-wide text-mist-200/60">
+              <div className="min-w-0 break-words">
+                <p className="text-xs font-semibold uppercase tracking-wide text-muted">
                   {item.label}
                 </p>
-                <p className="text-sm font-medium text-mist-50 group-hover:text-gold-300 transition-colors">
+                <p className="text-sm font-medium text-navy group-hover:text-gold-dark">
                   {item.value}
                 </p>
-                <p className="text-xs text-mist-200/50">{item.note}</p>
+                <p className="text-xs text-muted">{item.note}</p>
               </div>
             </Tag>
           );

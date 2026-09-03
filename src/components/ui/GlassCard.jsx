@@ -1,9 +1,9 @@
 import { cn } from "@/lib/utils";
 
 const variants = {
-  light: "glass-panel",
-  strong: "glass-panel-strong",
-  dark: "glass-panel-dark text-mist-50",
+  light: "bg-white border border-border",
+  strong: "bg-white border border-border shadow-(--shadow-md)",
+  dark: "bg-navy text-white",
 };
 
 export function GlassCard({
@@ -15,11 +15,7 @@ export function GlassCard({
 }) {
   return (
     <Tag
-      className={cn(
-        "rounded-(--radius-lg) transition-transform duration-500 ease-(--ease-premium)",
-        variants[variant],
-        className,
-      )}
+      className={cn("rounded-(--radius-lg)", variants[variant], className)}
       {...props}
     >
       {children}

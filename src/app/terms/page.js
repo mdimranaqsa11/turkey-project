@@ -11,7 +11,7 @@ export const metadata = {
 };
 
 const listClass =
-  "flex flex-col gap-3 text-sm leading-relaxed text-mist-100/75 sm:text-base [&_ul]:flex [&_ul]:flex-col [&_ul]:gap-2 [&_ul]:pl-5 [&_li]:list-disc [&_ol]:flex [&_ol]:flex-col [&_ol]:gap-2 [&_ol]:pl-5 [&_ol]:list-decimal";
+  "flex flex-col gap-3 text-sm leading-relaxed text-muted sm:text-base [&_ul]:flex [&_ul]:flex-col [&_ul]:gap-2 [&_ul]:pl-5 [&_li]:list-disc [&_ol]:flex [&_ol]:flex-col [&_ol]:gap-2 [&_ol]:pl-5 [&_ol]:list-decimal";
 
 const sections = [
   {
@@ -57,31 +57,31 @@ const sections = [
     body: (
       <>
         <p>
-          <strong className="text-white">Course Fees:</strong> All course
+          <strong className="text-navy">Course Fees:</strong> All course
           fees must be paid in full or according to the selected payment plan
           before the course begins. Enrollment will be confirmed only after
           successful payment processing through Stripe.
         </p>
         <p>
-          <strong className="text-white">Payment Processing:</strong> All
+          <strong className="text-navy">Payment Processing:</strong> All
           payments are securely processed through Stripe. We do not store or
           have access to your full credit card details. Stripe&apos;s
           encryption and PCI-compliant system ensures safe and secure
           transactions.
         </p>
         <p>
-          <strong className="text-white">Payment Methods:</strong> We accept
+          <strong className="text-navy">Payment Methods:</strong> We accept
           all major credit and debit cards, UPI, and other payment methods
           supported by Stripe in your region.
         </p>
         <p>
-          <strong className="text-white">Non-Refundable Payments:</strong>{" "}
+          <strong className="text-navy">Non-Refundable Payments:</strong>{" "}
           All payments made through Stripe are final and non-refundable.
           Please review all course details carefully before completing your
           payment.
         </p>
         <p>
-          <strong className="text-white">Late or Failed Payments:</strong>{" "}
+          <strong className="text-navy">Late or Failed Payments:</strong>{" "}
           For installment plans, late or failed payments may result in
           temporary suspension of course access until the balance is cleared.
         </p>
@@ -155,7 +155,7 @@ const sections = [
     body: (
       <>
         <p>
-          <strong className="text-white">Important:</strong> TIAMA
+          <strong className="text-navy">Important:</strong> TIAMA
           certification does not constitute a license to practice medicine
           or aesthetics.
         </p>
@@ -266,7 +266,7 @@ const sections = [
 ];
 
 const highlightClasses = {
-  gold: "border-gold-400 bg-gold-400/10",
+  gold: "border-gold bg-gold/10",
   red: "border-rose-400 bg-rose-400/10",
 };
 
@@ -284,9 +284,9 @@ export default function TermsPage() {
           <Reveal>
             <GlassCard
               variant="light"
-              className="flex items-start gap-3 rounded-(--radius-md) border-l-4 border-royal-400 bg-royal-400/10 p-6"
+              className="flex items-start gap-3 rounded-(--radius-md) border-l-4 border-blue bg-blue-soft p-6"
             >
-              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-royal-400/20 text-royal-100">
+              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-blue/20 text-blue">
                 <svg
                   width="18"
                   height="18"
@@ -303,10 +303,10 @@ export default function TermsPage() {
                 </svg>
               </span>
               <div>
-                <h2 className="font-display text-base font-semibold text-white sm:text-lg">
+                <h2 className="font-display text-base font-semibold text-navy sm:text-lg">
                   Acceptance of Terms
                 </h2>
-                <p className="mt-1 text-sm leading-relaxed text-mist-100/75 sm:text-base">
+                <p className="mt-1 text-sm leading-relaxed text-muted sm:text-base">
                   By enrolling in any TIAMA course or program, you agree to
                   be bound by these Terms and Conditions.
                 </p>
@@ -320,7 +320,7 @@ export default function TermsPage() {
           >
             {sections.map((section) => (
               <div key={section.title} className="flex flex-col gap-3">
-                <h2 className="font-display text-xl font-semibold text-white sm:text-2xl">
+                <h2 className="font-display text-xl font-semibold text-navy sm:text-2xl">
                   {section.title}
                 </h2>
                 {section.highlight ? (

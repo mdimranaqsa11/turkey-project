@@ -40,15 +40,15 @@ const commitments = [
 
 export function AboutCommitment() {
   return (
-    <section className="relative overflow-hidden py-24 sm:py-32">
+    <section className="py-24 sm:py-32">
       <Container className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
         <div className="flex flex-col gap-8">
           <Reveal className="flex flex-col gap-4">
-            <h2 className="font-display text-3xl font-semibold tracking-tight text-mist-50 sm:text-4xl">
+            <h2 className="font-display text-3xl font-semibold tracking-tight text-navy sm:text-4xl">
               Our commitment to educational{" "}
-              <span className="text-gradient-gold">excellence</span>
+              <span className="text-gold-dark">excellence</span>
             </h2>
-            <p className="text-base leading-relaxed text-mist-200/75 sm:text-lg">
+            <p className="text-base leading-relaxed text-muted sm:text-lg">
               TIAMA upholds the highest standards in medical science
               certification, ensuring institutions and professionals
               worldwide achieve excellence through rigorous evaluation and
@@ -60,14 +60,14 @@ export function AboutCommitment() {
             {commitments.map((item) => (
               <StaggerItem key={item.title}>
                 <GlassCard variant="light" className="flex items-start gap-4 rounded-(--radius-md) p-5">
-                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-(--radius-sm) border border-gold-400/40 bg-gold-400/10 text-gold-300">
+                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-(--radius-sm) border border-gold/40 bg-gold/10 text-gold-dark">
                     {item.icon}
                   </span>
                   <div>
-                    <h3 className="font-display text-base font-bold text-mist-50">
+                    <h3 className="font-display text-base font-bold text-navy">
                       {item.title}
                     </h3>
-                    <p className="mt-1 text-sm leading-relaxed text-mist-200/75">
+                    <p className="mt-1 text-sm leading-relaxed text-muted">
                       {item.description}
                     </p>
                   </div>
@@ -78,7 +78,6 @@ export function AboutCommitment() {
         </div>
 
         <Reveal direction="left" delay={0.1} className="relative mx-auto w-full max-w-md">
-          <div className="pointer-events-none absolute -inset-6 -z-10 rounded-(--radius-xl) bg-gradient-to-br from-gold-400/25 to-royal-400/20 blur-2xl" />
           <GlassCard variant="strong" className="p-3">
             <div className="relative aspect-[4/5] w-full overflow-hidden rounded-(--radius-md)">
               <Image
